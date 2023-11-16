@@ -1,39 +1,32 @@
-import * as L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import { CSSProperties, useEffect, useRef, useState } from "react";
-
-const MAP_TILE = L.tileLayer(
-  `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`
-);
+import * as L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import { CSSProperties, useEffect, useRef } from 'react';
+import { KINDOF_MAP_TILES, MAP_TILES } from '../constants/MapTiles';
 
 const mapStyles: CSSProperties = {
-  overflow: "hidden",
-  width: "100%",
-  height: "100%",
+  overflow: 'hidden',
+  width: '100%',
+  height: '100%',
 };
 
-interface Point {
-  name: string;
-  latLng: number[];
-}
-
-function MapLayer() {
+function MapComponent({
+  currentTileLayer,
+}: {
+  currentTileLayer: KINDOF_MAP_TILES;
+}) {
   const mapRef = useRef<L.Map | null>(null);
   const layerRef = useRef<L.LayerGroup | null>(null);
-  const [pointDatas, setPointDatas] = useState<Point[]>([]);
 
   const mapParams: L.MapOptions = {
     center: L.latLng(36, 128),
-    zoom: 6,
+    zoom: 8,
     zoomControl: false,
-    layers: [MAP_TILE],
-  };
-
-  const fetchPointDatas = async () => {
-    const datas: Point[] = await fetch("./src/data.json").then((data) =>
-      data.json()
-    );
-    setPointDatas(datas);
+    layers: [
+      L.tileLayer(
+        MAP_TILES[currentTileLayer].url,
+        MAP_TILES[currentTileLayer].options
+      ),
+    ],
   };
 
   /**
@@ -44,23 +37,28 @@ function MapLayer() {
    */
 
   useEffect(() => {
-    fetchPointDatas();
-    mapRef.current = L.map("map", mapParams);
+    mapRef.current = L.map('map', {
+      ...mapParams,
+      layers: [
+        L.tileLayer(
+          MAP_TILES[currentTileLayer].url,
+          MAP_TILES[currentTileLayer].options
+        ),
+      ],
+    });
     return () => {
       if (mapRef.current) {
         mapRef.current.remove();
       }
     };
-  }, []);
-
-  console.log(pointDatas);
+  }, [currentTileLayer, mapParams]);
 
   return (
     <div
       id="map"
       style={{
         ...mapStyles,
-        position: "absolute",
+        position: 'relative',
         top: 0,
         zIndex: 0,
       }}
@@ -68,4 +66,4 @@ function MapLayer() {
   );
 }
 
-export default MapLayer;
+export default MapComponent;
