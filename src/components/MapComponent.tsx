@@ -3,17 +3,13 @@ import "leaflet/dist/leaflet.css";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 
 const MAP_TILE = L.tileLayer(
-  `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`,
-  {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  }
+  `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`
 );
 
 const mapStyles: CSSProperties = {
   overflow: "hidden",
   width: "100%",
-  height: "100vh",
+  height: "100%",
 };
 
 interface Point {
@@ -30,7 +26,6 @@ function MapLayer() {
     center: L.latLng(36, 128),
     zoom: 6,
     zoomControl: false,
-    maxBounds: L.latLngBounds(L.latLng(15, 100), L.latLng(50, 160)),
     layers: [MAP_TILE],
   };
 
@@ -58,44 +53,18 @@ function MapLayer() {
     };
   }, []);
 
-  useEffect(() => {
-    if (mapRef.current) {
-      layerRef.current = L.layerGroup().addTo(mapRef.current);
-    }
-  }, []);
-
-  /**
-   * 고민: 이벤트 리스너 달아준 거는 컴포넌트 언마운트할 때 다 해제해주어야 하나??
-   */
-
-  useEffect(() => {
-    if (layerRef.current) {
-      layerRef.current.clearLayers();
-
-      pointDatas.forEach((point) => {
-        const [lat, lng] = point.latLng;
-
-        L.circle(L.latLng(lat, lng), {
-          radius: 30000,
-        })
-          .addTo(layerRef.current)
-          .on("click", () => {
-            alert(`${point.name}!!`);
-          });
-      });
-    }
-  }, [pointDatas]);
+  console.log(pointDatas);
 
   return (
     <div
       id="map"
       style={{
         ...mapStyles,
-        width: "100%",
-        height: "400px",
-        borderRadius: "20px",
+        position: "absolute",
+        top: 0,
+        zIndex: 0,
       }}
-    />
+    ></div>
   );
 }
 
