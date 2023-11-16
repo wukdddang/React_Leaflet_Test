@@ -20,7 +20,8 @@ const NavBar = () => {
       </h1>
 
       <div className="d-flex align-items-center py-2">
-        // TODO: 셀렉터 만들기
+        {/* //TODO: 셀렉터 만들기 */}
+        TODO
       </div>
     </header>
   );
