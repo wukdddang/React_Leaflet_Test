@@ -16,6 +16,7 @@ const ExampleOffcanvas: React.FC<ExampleOffcanvasProps> = ({ className }) => {
       style={{
         position: "fixed",
         zIndex: 1,
+        right: 0,
         bottom: 0,
       }}
     >
