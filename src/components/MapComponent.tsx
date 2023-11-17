@@ -1,24 +1,23 @@
-import * as L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import { CSSProperties, useEffect, useRef } from 'react';
-import { KINDOF_MAP_TILES, MAP_TILES } from '../constants/MapTiles';
+import * as L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import "leaflet-draw";
+import { CSSProperties, useEffect, useRef } from "react";
+import { MAP_TILES } from "../constants/MapTiles";
+import useGlobalStore from "../store/GlobalStore";
 
 const mapStyles: CSSProperties = {
-  overflow: 'hidden',
-  width: '100%',
-  height: '100%',
+  overflow: "hidden",
+  width: "100%",
+  height: "100%",
 };
 
-function MapComponent({
-  currentTileLayer,
-}: {
-  currentTileLayer: KINDOF_MAP_TILES;
-}) {
+function MapComponent() {
   const mapRef = useRef<L.Map | null>(null);
   const layerRef = useRef<L.LayerGroup | null>(null);
+  const currentTileLayer = useGlobalStore((state) => state.currentTileLayer);
 
   const mapParams: L.MapOptions = {
-    center: L.latLng(36, 128),
+    center: [36, 128],
     zoom: 8,
     zoomControl: false,
     layers: [
@@ -29,6 +28,25 @@ function MapComponent({
     ],
   };
 
+  const drawControl = new L.Control.Draw({
+    draw: {
+      polygon: false,
+      marker: false,
+      circle: false,
+      rectangle: {
+        shapeOptions: {
+          color: "#652484", // 변경할 선의 색상
+          fillOpacity: 0.2, // 변경할 채우기 투명도
+          opacity: 1, // 변경할 테두리 투명도
+          weight: 2, // 변경할 테두리 두께
+        },
+      },
+      polyline: false,
+      circlemarker: false,
+    },
+    position: "topright",
+  });
+
   /**
    * 맵 레이어 렌더링
    *
@@ -37,7 +55,7 @@ function MapComponent({
    */
 
   useEffect(() => {
-    mapRef.current = L.map('map', {
+    mapRef.current = L.map("map", {
       ...mapParams,
       layers: [
         L.tileLayer(
@@ -46,6 +64,7 @@ function MapComponent({
         ),
       ],
     });
+
     return () => {
       if (mapRef.current) {
         mapRef.current.remove();
@@ -58,7 +77,7 @@ function MapComponent({
       id="map"
       style={{
         ...mapStyles,
-        position: 'relative',
+        position: "relative",
         top: 0,
         zIndex: 0,
       }}

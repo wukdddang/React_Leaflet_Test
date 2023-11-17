@@ -1,30 +1,33 @@
-import { KINDOF_MAP_TILES } from '../constants/MapTiles';
+import { KIND_OF_MAP_TILES } from "../constants/MapTiles";
+import useGlobalStore from "../store/GlobalStore";
 
 type TileLayersProps = {
-  layers: KINDOF_MAP_TILES[];
-  changeTileLayer: (layer: KINDOF_MAP_TILES) => void;
+  layers: KIND_OF_MAP_TILES[];
 };
 
-const TileLayers = ({ layers, changeTileLayer }: TileLayersProps) => {
+const TileLayers = ({ layers }: TileLayersProps) => {
+  const setCurrentTileLayer = useGlobalStore(
+    (state) => state.setCurrentTileLayer
+  );
   const handleMouseEnter = (e: React.MouseEvent) => {
     const img = e.target as HTMLImageElement;
-    img.classList.add('enlarged');
+    img.classList.add("enlarged");
   };
 
   const handleMouseLeave = (e: React.MouseEvent) => {
     const img = e.target as HTMLImageElement;
-    img.classList.remove('enlarged');
+    img.classList.remove("enlarged");
   };
 
   return (
     <div
       style={{
-        position: 'absolute',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '10px',
-        right: '20px',
-        bottom: '50px',
+        position: "absolute",
+        display: "flex",
+        flexDirection: "column",
+        gap: "10px",
+        right: "20px",
+        bottom: "50px",
         zIndex: 2,
       }}
     >
@@ -36,16 +39,16 @@ const TileLayers = ({ layers, changeTileLayer }: TileLayersProps) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={() => {
-              changeTileLayer(layer);
+              setCurrentTileLayer(layer);
             }}
             style={{
-              height: '60px',
-              width: '60px',
-              padding: '3px',
-              backgroundColor: '#fff',
-              borderRadius: '3px',
-              cursor: 'pointer',
-              transition: '0.3s ease',
+              height: "60px",
+              width: "60px",
+              padding: "3px",
+              backgroundColor: "#fff",
+              borderRadius: "3px",
+              cursor: "pointer",
+              transition: "0.3s ease",
             }}
           />
         );
