@@ -9,7 +9,8 @@ const NavBar = () => {
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        height: "50px",
+        height: "60px",
+        padding: "10px",
       }}
     >
       <h1
