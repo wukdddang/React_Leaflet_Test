@@ -18,19 +18,7 @@ function MapComponent() {
     center: [36, 128],
     zoom: 8,
     zoomControl: false,
-    layers: [
-      L.tileLayer(
-        MAP_TILES[currentTileLayer].url,
-        MAP_TILES[currentTileLayer].options
-      ),
-    ],
   };
-
-  /**
-   * 맵 레이어 렌더링
-   * Leaflet 공식문서에서는 지도 인스턴스의 remove() 메서드를 사용하여 map과 관련된 이벤트 리스너들을 제거하도록 권장한다.
-   * 이렇게 하면 컴포넌트가 언마운트 될 때, 맵 인스턴스가 제대로 삭제된다.
-   */
 
   useEffect(() => {
     mapRef.current = L.map("map", mapParams);
@@ -55,10 +43,16 @@ function MapComponent() {
   }, []);
 
   useEffect(() => {
-    tileLayerRef.current = L.tileLayer(
-      MAP_TILES[currentTileLayer].url,
-      MAP_TILES[currentTileLayer].options
-    ).addTo(mapRef.current);
+    if (tileLayerRef.current) {
+      tileLayerRef.current.remove();
+    }
+
+    if (mapRef.current) {
+      tileLayerRef.current = L.tileLayer(
+        MAP_TILES[currentTileLayer].url,
+        MAP_TILES[currentTileLayer].options
+      ).addTo(mapRef.current);
+    }
   }, [currentTileLayer]);
 
   return (

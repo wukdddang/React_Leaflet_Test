@@ -15,7 +15,9 @@ function App() {
     >
       <NavBar />
       <SideBar />
-      <TileLayers layers={["google_satellite", "leaflet_osm"]} />
+      <TileLayers
+        layers={["google_satellite", "leaflet_osm", "leaflet_dark"]}
+      />
       <MapComponent />
     </div>
   );
