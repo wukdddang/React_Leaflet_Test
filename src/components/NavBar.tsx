@@ -24,7 +24,7 @@ const NavBar = () => {
           className="d-flex align-items-center text-dark text-decoration-none"
         >
           <img
-            src="./src/assets/images/컬러세로형.png"
+            src="/assets/images/컬러세로형.png"
             style={{
               marginRight: "5px",
               width: "40px",

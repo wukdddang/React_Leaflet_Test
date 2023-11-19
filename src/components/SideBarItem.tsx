@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useGlobalStore from "../../store/GlobalStore";
+import useGlobalStore from "../store/GlobalStore";
 
 type SideBarItem = {
   text: string;
@@ -44,15 +44,15 @@ const SideBarItem = ({ text, children }: SideBarItem) => {
       >
         {children}
       </div>
-      {isSideBarOpened && (
-        <span
-          style={{
-            whiteSpace: "nowrap",
-          }}
-        >
-          {text}
-        </span>
-      )}
+      <span
+        style={{
+          whiteSpace: "nowrap",
+          transition: "0.3s ease",
+          opacity: !isSideBarOpened ? 0 : 1,
+        }}
+      >
+        {text}
+      </span>
     </div>
   );
 };

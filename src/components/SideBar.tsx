@@ -9,7 +9,7 @@ import { WiEarthquake } from "react-icons/wi";
 import { SlMap } from "react-icons/sl";
 import { FaShip } from "react-icons/fa6";
 import { IoColorFillOutline } from "react-icons/io5";
-import SideBarItem from "./SideBar/SideBarItem";
+import SideBarItem from "./SideBarItem";
 import useGlobalStore from "../store/GlobalStore";
 
 const SideBar = () => {
@@ -51,7 +51,6 @@ const SideBar = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "",
           position: "absolute",
           top: "100px",
           cursor: "pointer",

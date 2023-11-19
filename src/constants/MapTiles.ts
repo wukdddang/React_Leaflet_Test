@@ -9,6 +9,6 @@ export const MAP_TILES = {
     url: "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     options: {},
   },
-} as const;
+};
 
 export type KIND_OF_MAP_TILES = keyof typeof MAP_TILES;

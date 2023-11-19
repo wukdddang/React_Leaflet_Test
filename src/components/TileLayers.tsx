@@ -26,16 +26,16 @@ const TileLayers = ({ layers }: TileLayersProps) => {
         display: "flex",
         flexDirection: "column",
         gap: "10px",
-        right: "20px",
+        right: "50px",
         bottom: "50px",
-        zIndex: 2,
+        zIndex: 1,
       }}
     >
       {layers.map((layer) => {
         return (
           <img
             key={layer}
-            src={`./src/assets/images/${layer}.png`}
+            src={`/assets/images/${layer}.png`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={() => {
