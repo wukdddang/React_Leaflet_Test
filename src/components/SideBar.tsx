@@ -13,14 +13,13 @@ import SideBarItem from "./SideBarItem";
 import useGlobalStore from "../store/GlobalStore";
 
 const SideBar = () => {
-  // console.log(document.body.scrollWidth);
   const isSideBarOpened = useGlobalStore((state) => state.isSideBarOpened);
-  const setIsSideBarOpened = useGlobalStore(
-    (state) => state.setIsSideBarOpened
+  const toggleSideBarOpened = useGlobalStore(
+    (state) => state.toggleSideBarOpened
   );
 
   const handleToggleSideBar = (e: React.MouseEvent) => {
-    e.target.classList.toggle("open-sidebar");
+    (e.target as HTMLElement).classList.toggle("open-sidebar");
   };
 
   return (
@@ -31,17 +30,18 @@ const SideBar = () => {
         left: 0,
         zIndex: 1,
         transition: "0.3s ease",
+        overflowY: "scroll",
       }}
     >
       <div
         style={{
           position: "absolute",
-          top: "60px",
+          top: "70px",
           right: "20px",
           cursor: "pointer",
         }}
         onClick={(e) => {
-          setIsSideBarOpened();
+          toggleSideBarOpened();
           handleToggleSideBar(e);
         }}
       >
@@ -57,32 +57,44 @@ const SideBar = () => {
           width: "100%",
         }}
       >
-        <SideBarItem text="BookMark">
-          <BsBookmarks size={20} />
+        <SideBarItem text="BookMark" icon={<BsBookmarks size={20} />}>
+          {"hi"}
         </SideBarItem>
-        <SideBarItem text="Range Search">
-          <BsBoundingBoxCircles size={20} />
+        <SideBarItem
+          text="Range Search"
+          icon={<BsBoundingBoxCircles size={20} />}
+        >
+          {"hi"}
         </SideBarItem>
-        <SideBarItem text="SAR">
-          <SlMap size={20} />
+        <SideBarItem text="SAR" icon={<SlMap size={20} />}>
+          {"hi"}
         </SideBarItem>
-        <SideBarItem text="InSAR">
-          <BiSolidAnalyse size={20} />
+        <SideBarItem text="InSAR" icon={<BiSolidAnalyse size={20} />}>
+          {"hi"}
         </SideBarItem>
-        <SideBarItem text="Ship Detection">
-          <FaShip size={20} />
+        <SideBarItem text="Ship Detection" icon={<FaShip size={20} />}>
+          {"hi"}
         </SideBarItem>
-        <SideBarItem text="Bridge Detection">
-          <BiObjectsHorizontalCenter size={20} />
+        <SideBarItem
+          text="Bridge Detection"
+          icon={<BiObjectsHorizontalCenter size={20} />}
+        >
+          {"hi"}
         </SideBarItem>
-        <SideBarItem text="Water Detection">
-          <BiWater size={20} />
+        <SideBarItem text="Water Detection" icon={<BiWater size={20} />}>
+          {"hi"}
         </SideBarItem>
-        <SideBarItem text="Earthquake Detection">
-          <WiEarthquake size={20} />
+        <SideBarItem
+          text="Earthquake Detection"
+          icon={<WiEarthquake size={20} />}
+        >
+          {"hi"}
         </SideBarItem>
-        <SideBarItem text="Oilspill Detection">
-          <IoColorFillOutline size={20} />
+        <SideBarItem
+          text="Oilspill Detection"
+          icon={<IoColorFillOutline size={20} />}
+        >
+          {"hi"}
         </SideBarItem>
       </div>
     </nav>
