@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   font-family: "Pretendard-Regular";
   font-weight: 800;
