@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useGlobalStore, { SideBarOptionType } from "../store/GlobalStore";
 
-type SideBarItemProps = {
+export type SideBarItemProps = {
   text: SideBarOptionType;
   icon: React.ReactElement;
-  children: JSX.Element;
+  children: React.ReactElement;
 };
 
 const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
@@ -28,6 +28,15 @@ const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
   const handleMouseLeave = () => {
     setIsHover(false);
   };
+
+  useEffect(() => {
+    const isOptionInClickedArr = clickedSideBarOptions.filter(
+      (option) => option === text
+    ).length;
+    if (!isOptionInClickedArr) {
+      setIsItemClicked(false);
+    }
+  }, [clickedSideBarOptions, text]);
 
   return (
     <>
@@ -78,6 +87,7 @@ const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
           opacity: isItemClicked ? 1 : 0,
           maxHeight: isItemClicked ? "100px" : "0",
           overflow: "hidden",
+          paddingLeft: "30px",
         }}
       >
         <p>{children}</p>

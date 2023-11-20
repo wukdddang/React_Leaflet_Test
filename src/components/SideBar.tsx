@@ -57,16 +57,19 @@ const SideBar = () => {
           width: "100%",
         }}
       >
-        <SideBarItem text="BookMark" icon={<BsBookmarks size={20} />}>
+        <SideBarItem
+          text="BookMark"
+          icon={<BsBookmarks size={20} role="BookMark" />}
+        >
           {"hi"}
         </SideBarItem>
         <SideBarItem
           text="Range Search"
-          icon={<BsBoundingBoxCircles size={20} />}
+          icon={<BsBoundingBoxCircles size={20} role="RangeSearch" />}
         >
           {"hi"}
         </SideBarItem>
-        <SideBarItem text="SAR" icon={<SlMap size={20} />}>
+        <SideBarItem text="SAR" icon={<SlMap size={20} role="SAR" />}>
           {"hi"}
         </SideBarItem>
         <SideBarItem text="InSAR" icon={<BiSolidAnalyse size={20} />}>
