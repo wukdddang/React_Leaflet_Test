@@ -12,6 +12,12 @@ const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
   const setCurrentSideBarOption = useGlobalStore(
     (state) => state.setCurrentSideBarOption
   );
+  const pushCurrentSideBarOption = useGlobalStore(
+    (state) => state.pushCurrentSideBarOption
+  );
+  const clickedSideBarOptions = useGlobalStore(
+    (state) => state.clickedSideBarOptions
+  );
 
   const [isItemClicked, setIsItemClicked] = useState(false);
   const [isHover, setIsHover] = useState(false);
@@ -39,6 +45,7 @@ const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
         onMouseLeave={handleMouseLeave}
         onClick={() => {
           setCurrentSideBarOption(text);
+          pushCurrentSideBarOption(text, clickedSideBarOptions);
           setIsItemClicked((prev) => !prev);
         }}
       >

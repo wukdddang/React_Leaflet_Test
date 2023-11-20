@@ -16,29 +16,38 @@ export type SideBarOptionType =
 interface GlobalState {
   isSideBarOpened: boolean;
   currentSideBarOption: SideBarOptionType;
-  currentSideBarOptions: SideBarOptionType[];
+  clickedSideBarOptions: SideBarOptionType[];
   currentTileLayer: KIND_OF_MAP_TILES;
   toggleSideBarOpened: () => void;
   setCurrentSideBarOption: (currentSideBarOption: SideBarOptionType) => void;
+  pushCurrentSideBarOption: (
+    currentSideBarOption: SideBarOptionType,
+    currentSideBarOptions: SideBarOptionType[]
+  ) => void;
   setCurrentTileLayer: (currentTileLayer: KIND_OF_MAP_TILES) => void;
 }
 
 const useGlobalStore = create<GlobalState>((set) => ({
   isSideBarOpened: false,
   currentSideBarOption: null,
-  currentSideBarOptions: [],
+  clickedSideBarOptions: [],
   currentTileLayer: "google_satellite",
   toggleSideBarOpened: () =>
     set((state) => {
       return {
         isSideBarOpened: !state.isSideBarOpened,
         currentSideBarOption: null,
+        clickedSideBarOptions: [],
       };
     }),
   setCurrentSideBarOption: (currentSideBarOption) =>
     set({
       currentSideBarOption,
       isSideBarOpened: true,
+    }),
+  pushCurrentSideBarOption: (currentSideBarOption, clickedSideBarOptions) =>
+    set({
+      clickedSideBarOptions: [...clickedSideBarOptions, currentSideBarOption],
     }),
   setCurrentTileLayer: (currentTileLayer) =>
     set({

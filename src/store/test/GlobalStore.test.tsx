@@ -12,7 +12,7 @@ describe("zustand를 사용한 전역 상태가 잘 저장되는지 테스트한
     expect(result.current).toBeNull();
   });
 
-  test("특정 SideBarItem을 클릭하면 해당 값을 저장한다.", async () => {
+  test("특정 SideBarItem을 클릭하면 currentSideBarOption에 해당 값을 저장한다.", async () => {
     const user = userEvent.setup();
     render(<SideBar />);
 
@@ -31,5 +31,25 @@ describe("zustand를 사용한 전역 상태가 잘 저장되는지 테스트한
     const sar = await screen.getByRole("SAR");
     await user.click(sar);
     expect(result.current).toEqual("SAR");
+  });
+
+  test("클릭한 값들은 clickedSideBarOptions에 저장된다.", async () => {
+    const user = userEvent.setup();
+    render(<SideBar />);
+
+    const { result } = renderHook(() =>
+      useGlobalStore((state) => state.clickedSideBarOptions)
+    );
+
+    const bookMark = await screen.getByRole("BookMark");
+    await user.click(bookMark);
+    const rangeSearch = await screen.getByRole("RangeSearch");
+    await user.click(rangeSearch);
+    const sar = await screen.getByRole("SAR");
+    await user.click(sar);
+
+    expect(result.current).toEqual(
+      expect.arrayContaining(["BookMark", "Range Search", "SAR"])
+    );
   });
 });
