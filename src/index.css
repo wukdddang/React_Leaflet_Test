@@ -23,3 +23,8 @@
 .open-sidebar {
   transition: 0.3s ease;
 }
+
+.canvas-container-rect {
+  height: 100%;
+  width: 100%;
+}

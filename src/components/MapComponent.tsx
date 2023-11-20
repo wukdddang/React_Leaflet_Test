@@ -2,6 +2,8 @@ import * as L from "leaflet";
 import { CSSProperties, useEffect, useRef } from "react";
 import { MAP_TILES } from "../constants/MapTiles";
 import useGlobalStore from "../store/GlobalStore";
+import ROICanvas from "./ROICanvas";
+import useDrawROIStore from "../store/DrawROIStore";
 
 const mapStyles: CSSProperties = {
   overflow: "hidden",
@@ -13,9 +15,11 @@ function MapComponent() {
   const mapRef = useRef<L.Map | null>(null);
   const tileLayerRef: React.MutableRefObject<L.TileLayer | null> = useRef(null);
   const currentTileLayer = useGlobalStore((state) => state.currentTileLayer);
+  const isROIEnabled = useDrawROIStore((state) => state.isROIEnabled);
+  const setROIEnable = useDrawROIStore((state) => state.setROIEnable);
 
   const mapParams: L.MapOptions = {
-    center: [36, 128],
+    center: [36, 127.5],
     zoom: 8,
     zoomControl: false,
   };
@@ -29,7 +33,16 @@ function MapComponent() {
     ).addTo(mapRef.current);
 
     fetch("/assets/images/daecheong_preview.png").then((res) => {
-      console.log(res);
+      // console.log(
+      //   mapRef.current?.latLngToContainerPoint(
+      //     L.latLng(36.351759106173766, 127.48081498291273)
+      //   )
+      // );
+      // console.log(
+      //   mapRef.current?.latLngToContainerPoint(
+      //     L.latLng(36.42983922705515, 127.55381729230828)
+      //   )
+      // );
       const imageBounds: L.LatLngBoundsLiteral = [
         [36.351759106173766, 127.48081498291273],
         [36.42983922705515, 127.55381729230828],
@@ -40,7 +53,7 @@ function MapComponent() {
     return () => {
       mapRef.current?.remove();
     };
-  }, []);
+  }, [mapRef]);
 
   useEffect(() => {
     if (tileLayerRef.current) {
@@ -56,15 +69,47 @@ function MapComponent() {
   }, [currentTileLayer]);
 
   return (
-    <div
-      id="map"
-      style={{
-        ...mapStyles,
-        position: "relative",
-        top: 0,
-        zIndex: 0,
-      }}
-    ></div>
+    <>
+      <div
+        id="map"
+        style={{
+          ...mapStyles,
+          position: "relative",
+          top: 0,
+          zIndex: 0,
+        }}
+      ></div>
+      <ROICanvas currentMap={mapRef.current} />
+      <div
+        style={{
+          position: "absolute",
+          bottom: "10px",
+          left: "100px",
+          transition: "0.3s ease",
+        }}
+      >
+        <button
+          onClick={() => {
+            if (isROIEnabled) {
+              mapRef.current?.dragging.enable();
+              setROIEnable(false);
+            } else {
+              mapRef.current?.dragging.disable();
+              setROIEnable(true);
+            }
+          }}
+        >
+          {isROIEnabled ? "Enable Pan" : "Disable Pan"}
+        </button>
+        <button
+          onClick={() => {
+            setROIEnable(true);
+          }}
+        >
+          Draw ROI
+        </button>
+      </div>
+    </>
   );
 }
 
