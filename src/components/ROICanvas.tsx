@@ -3,14 +3,14 @@ import useDrawROIStore from "../store/DrawROIStore";
 import * as L from "leaflet";
 
 type ROICanvas = {
-  currentMap: any;
+  currentMap: L.Map | null;
 };
 
 const ROICanvas = ({ currentMap }: ROICanvas) => {
   const isROIEnabled = useDrawROIStore((state) => state.isROIEnabled);
 
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const contextRef = useRef<CanvasRenderingContext2D>(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const contextRef = useRef<CanvasRenderingContext2D | null>(null);
 
   const [isDrawing, setIsDrawing] = useState(false);
 
@@ -63,27 +63,42 @@ const ROICanvas = ({ currentMap }: ROICanvas) => {
     const rectWidth = newMouseX - startX.current;
     const rectHeight = newMouseY - startY.current;
 
-    contextRef.current.clearRect(
-      0,
-      0,
-      canvasRef.current.width,
-      canvasRef.current.height
-    );
+    if (contextRef.current) {
+      contextRef.current.clearRect(
+        0,
+        0,
+        canvasRef.current.width,
+        canvasRef.current.height
+      );
 
-    contextRef.current.strokeRect(
-      startX.current,
-      startY.current,
-      rectWidth,
-      rectHeight
-    );
+      contextRef.current.fillStyle = "rgba(0, 0, 0, 0.3)";
+      // Draw the rectangle path
+      contextRef.current.beginPath();
+      contextRef.current.rect(
+        startX.current,
+        startY.current,
+        rectWidth,
+        rectHeight
+      );
 
-    console.log(startX.current, startY.current, rectWidth, rectHeight);
-    console.log(
-      currentMap.layerPointToLatLng(L.point(startX.current, startY.current)),
-      currentMap.layerPointToLatLng(
-        L.point(startX.current + rectWidth, startY.current + rectHeight)
-      )
-    );
+      // Fill the rectangle with the semi-transparent black
+      contextRef.current.fill();
+
+      contextRef.current.strokeRect(
+        startX.current,
+        startY.current,
+        rectWidth,
+        rectHeight
+      );
+
+      console.log(startX.current, startY.current, rectWidth, rectHeight);
+      console.log(
+        currentMap.layerPointToLatLng(L.point(startX.current, startY.current)),
+        currentMap.layerPointToLatLng(
+          L.point(startX.current + rectWidth, startY.current + rectHeight)
+        )
+      );
+    }
   };
 
   const stopDrawingRectangle = () => {

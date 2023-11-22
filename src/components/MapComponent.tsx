@@ -33,27 +33,19 @@ function MapComponent() {
     ).addTo(mapRef.current);
 
     fetch("/assets/images/daecheong_preview.png").then((res) => {
-      // console.log(
-      //   mapRef.current?.latLngToContainerPoint(
-      //     L.latLng(36.351759106173766, 127.48081498291273)
-      //   )
-      // );
-      // console.log(
-      //   mapRef.current?.latLngToContainerPoint(
-      //     L.latLng(36.42983922705515, 127.55381729230828)
-      //   )
-      // );
       const imageBounds: L.LatLngBoundsLiteral = [
         [36.351759106173766, 127.48081498291273],
         [36.42983922705515, 127.55381729230828],
       ];
-      L.imageOverlay(res.url, imageBounds).addTo(mapRef.current);
+
+      mapRef.current &&
+        L.imageOverlay(res.url, imageBounds).addTo(mapRef.current);
     });
 
     return () => {
       mapRef.current?.remove();
     };
-  }, [mapRef]);
+  }, [mapRef.current]);
 
   useEffect(() => {
     if (tileLayerRef.current) {
@@ -89,6 +81,7 @@ function MapComponent() {
         }}
       >
         <button
+          className="btn btn-primary"
           onClick={() => {
             if (isROIEnabled) {
               mapRef.current?.dragging.enable();
@@ -102,11 +95,19 @@ function MapComponent() {
           {isROIEnabled ? "Enable Pan" : "Disable Pan"}
         </button>
         <button
+          className="btn btn-success"
           onClick={() => {
             setROIEnable(true);
           }}
         >
           Draw ROI
+        </button>
+        <button
+          onClick={() => {
+            fetch("/data/groups?page=1&limit=10");
+          }}
+        >
+          GET PNG By MSW
         </button>
       </div>
     </>

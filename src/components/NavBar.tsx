@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const NavBar = () => {
+  const navigate = useNavigate();
+
   return (
     <nav
       className="nav justify-content-between align-items-md-center px-4 border-bottom position-fixed bg-light-subtle"
@@ -13,7 +17,7 @@ const NavBar = () => {
         padding: "10px",
       }}
     >
-      <h1
+      <h4
         className="h4"
         style={{
           margin: 0,
@@ -33,7 +37,7 @@ const NavBar = () => {
           />
           <span>Lumir WEB-GIS</span>
         </a>
-      </h1>
+      </h4>
       <div
         style={{
           display: "flex",
@@ -45,6 +49,7 @@ const NavBar = () => {
             placeholder="Search"
             className="me-2 form-control"
             aria-label="Search"
+            role="Search"
           />
           <button type="button" className="btn btn-outline-success">
             Search
@@ -53,8 +58,12 @@ const NavBar = () => {
         <button
           type="button"
           className="btn btn-primary"
+          role="login"
           style={{
             marginLeft: "10px",
+          }}
+          onClick={() => {
+            navigate("/auth/register");
           }}
         >
           Login

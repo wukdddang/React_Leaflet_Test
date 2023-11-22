@@ -11,6 +11,7 @@ import { FaShip } from "react-icons/fa6";
 import { IoColorFillOutline } from "react-icons/io5";
 import SideBarItem from "./SideBarItem";
 import useGlobalStore from "../store/GlobalStore";
+import DataCard from "./SideBarItem/DataCard";
 
 const SideBar = () => {
   const isSideBarOpened = useGlobalStore((state) => state.isSideBarOpened);
@@ -33,26 +34,29 @@ const SideBar = () => {
         overflowY: "scroll",
       }}
     >
-      <div
+      <button
         style={{
           position: "absolute",
           top: "70px",
-          right: "20px",
+          right: "10px",
           cursor: "pointer",
         }}
         onClick={(e) => {
           toggleSideBarOpened();
           handleToggleSideBar(e);
         }}
+        className={`btn ${
+          isSideBarOpened ? "btn-outline-primary" : "btn-primary"
+        }`}
       >
         {!isSideBarOpened ? <FaChevronRight /> : <FaChevronLeft />}
-      </div>
+      </button>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           position: "absolute",
-          top: "100px",
+          top: "130px",
           cursor: "pointer",
           width: "100%",
         }}
@@ -61,13 +65,13 @@ const SideBar = () => {
           text="BookMark"
           icon={<BsBookmarks size={20} role="BookMark" />}
         >
-          {"hi"}
+          <DataCard text="BookMark" />
         </SideBarItem>
         <SideBarItem
           text="Range Search"
           icon={<BsBoundingBoxCircles size={20} role="RangeSearch" />}
         >
-          {"hi"}
+          <DataCard text="Range Search" />
         </SideBarItem>
         <SideBarItem text="SAR" icon={<SlMap size={20} role="SAR" />}>
           {"hi"}

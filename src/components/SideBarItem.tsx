@@ -4,7 +4,7 @@ import useGlobalStore, { SideBarOptionType } from "../store/GlobalStore";
 export type SideBarItemProps = {
   text: SideBarOptionType;
   icon: React.ReactElement;
-  children: React.ReactElement;
+  children: React.ReactElement[];
 };
 
 const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
@@ -90,8 +90,6 @@ const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
           paddingLeft: "30px",
         }}
       >
-        <p>{children}</p>
-        <p>{children}</p>
         <p>{children}</p>
       </span>
     </>
