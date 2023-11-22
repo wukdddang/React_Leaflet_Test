@@ -4,7 +4,7 @@ import { describe, expect, test } from "vitest";
 import useGlobalStore from "../GlobalStore";
 import SideBar from "../../components/SideBar";
 
-describe("zustand를 사용한 전역 상태가 잘 저장되는지 테스트한다.", () => {
+describe("zustand를 사용한 GlobalStore의 전역 상태가 잘 저장되는지 테스트한다.", () => {
   test("초기 상태의 SideBarOption 값을 확인한다.", () => {
     const { result } = renderHook(() =>
       useGlobalStore((state) => state.currentSideBarOption)
