@@ -1,5 +1,5 @@
 import "leaflet/dist/leaflet.css";
-import MapComponent from "./components/MapComponent";
+import Map from "./components/Map";
 import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -19,7 +19,7 @@ function App() {
       <TileLayers
         layers={["google_satellite", "leaflet_osm", "leaflet_dark"]}
       />
-      <MapComponent />
+      <Map />
     </div>
   );
 }

@@ -11,7 +11,7 @@ const mapStyles: CSSProperties = {
   height: "100%",
 };
 
-function MapComponent() {
+function Map() {
   const mapRef = useRef<L.Map | null>(null);
   const tileLayerRef: React.MutableRefObject<L.TileLayer | null> = useRef(null);
   const currentTileLayer = useGlobalStore((state) => state.currentTileLayer);
@@ -45,7 +45,7 @@ function MapComponent() {
     return () => {
       mapRef.current?.remove();
     };
-  }, [mapRef.current]);
+  }, [mapRef]);
 
   useEffect(() => {
     if (tileLayerRef.current) {
@@ -114,4 +114,4 @@ function MapComponent() {
   );
 }
 
-export default MapComponent;
+export default Map;
