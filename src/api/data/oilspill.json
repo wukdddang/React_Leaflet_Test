@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "boundingBox": {
+        "minx": 46.25491079743938,
+        "maxx": 49.13347229387198,
+        "miny": 27.598497446609112,
+        "maxy": 29.439365535248662
+      },
+      "_id": "6530a59d806b03e4243a9935",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20170717T024712_20170717T024736_017505_01D444_2D47_OILSP_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20170717T024712_20170717T024736_017505_01D444_2D47_OILSP_RGB000102",
+      "desc": "2023-10-19T03:42:06.057Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20170717T024712_20170717T024736_017505_01D444_2D47_OILSP_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20170717T024712_20170717T024736_017505_01D444_2D47_OILSP_RGB000102.png",
+      "category": "oilspill",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["oilspill"],
+      "createdAt": "2023-10-19T03:42:21.629Z",
+      "updatedAt": "2023-10-19T03:42:21.629Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 52.06757975788869,
+        "maxx": 54.904998414308615,
+        "miny": 25.71654326950528,
+        "maxy": 27.643138447774927
+      },
+      "_id": "6530a5ad806b03e4243a9938",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230120T022332_20230120T022357_046861_059E74_11A4_OILSP_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230120T022332_20230120T022357_046861_059E74_11A4_OILSP_RGB000102",
+      "desc": "2023-10-19T03:42:21.644Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230120T022332_20230120T022357_046861_059E74_11A4_OILSP_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230120T022332_20230120T022357_046861_059E74_11A4_OILSP_RGB000102.png",
+      "category": "oilspill",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["oilspill"],
+      "createdAt": "2023-10-19T03:42:37.670Z",
+      "updatedAt": "2023-10-19T03:42:37.670Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 38.12568835534712,
+        "maxx": 40.7847015963409,
+        "miny": 17.276568991348423,
+        "maxy": 19.213456922144278
+      },
+      "_id": "6530a5bd806b03e4243a993b",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230219T031514_20230219T031539_047299_05AD31_DAAE_OILSP_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230219T031514_20230219T031539_047299_05AD31_DAAE_OILSP_RGB000102",
+      "desc": "2023-10-19T03:42:37.690Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230219T031514_20230219T031539_047299_05AD31_DAAE_OILSP_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230219T031514_20230219T031539_047299_05AD31_DAAE_OILSP_RGB000102.png",
+      "category": "oilspill",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["oilspill"],
+      "createdAt": "2023-10-19T03:42:53.077Z",
+      "updatedAt": "2023-10-19T03:42:53.077Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 48.34284325504514,
+        "maxx": 51.24458128580802,
+        "miny": 27.739379731640543,
+        "maxy": 29.660114288560052
+      },
+      "_id": "6530a5ce806b03e4243ab6be",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230319T023925_20230319T023950_047707_05BB0D_56A1_OILSP_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230319T023925_20230319T023950_047707_05BB0D_56A1_OILSP_RGB000102",
+      "desc": "2023-10-19T03:42:53.092Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230319T023925_20230319T023950_047707_05BB0D_56A1_OILSP_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230319T023925_20230319T023950_047707_05BB0D_56A1_OILSP_RGB000102.png",
+      "category": "oilspill",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["oilspill"],
+      "createdAt": "2023-10-19T03:43:10.690Z",
+      "updatedAt": "2023-10-19T03:43:10.690Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 49.96797435167869,
+        "maxx": 52.81168121508745,
+        "miny": 25.505730189910363,
+        "maxy": 27.430901998810807
+      },
+      "_id": "6530a5df806b03e4243ac096",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230326T023149_20230326T023214_047809_05BE74_FCCB_OILSP_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230326T023149_20230326T023214_047809_05BE74_FCCB_OILSP_RGB000102",
+      "desc": "2023-10-19T03:43:10.705Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230326T023149_20230326T023214_047809_05BE74_FCCB_OILSP_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230326T023149_20230326T023214_047809_05BE74_FCCB_OILSP_RGB000102.png",
+      "category": "oilspill",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["oilspill"],
+      "createdAt": "2023-10-19T03:43:27.126Z",
+      "updatedAt": "2023-10-19T03:43:27.126Z",
+      "__v": 0
+    }
+  ]
+}

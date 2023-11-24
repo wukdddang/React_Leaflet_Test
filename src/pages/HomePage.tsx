@@ -1,7 +1,7 @@
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
-import TileLayers from "@/components/TileLayers";
 import MapContainer from "@/containers/MapContainer";
+import TileLayersContainer from "@/containers/TileLayersContainer";
 
 const HomePage = () => {
   return (
@@ -12,7 +12,7 @@ const HomePage = () => {
     >
       <NavBar />
       <SideBar />
-      <TileLayers
+      <TileLayersContainer
         layers={["google_satellite", "leaflet_osm", "leaflet_dark"]}
       />
       <MapContainer />

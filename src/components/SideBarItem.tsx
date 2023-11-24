@@ -1,43 +1,32 @@
-import { useEffect, useState } from "react";
-import useGlobalStore, { SideBarOptionType } from "../store/GlobalStore";
+import { CategoryData } from "@/api/getDataByCategory";
+import { SideBarOptionType } from "../store/SideBarStore";
+import DataCard from "./templates/DataCard";
 
 export type SideBarItemProps = {
   text: SideBarOptionType;
   icon: React.ReactElement;
-  children: React.ReactElement[];
+  isHover: boolean;
+  isSideBarOpened: boolean;
+  isItemClicked: boolean;
+  sideBarItemData?: CategoryData[];
+  isLoading: boolean;
+  handleMouseEnter: () => void;
+  handleMouseLeave: () => void;
+  handleClick: () => void;
 };
 
-const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
-  const isSideBarOpened = useGlobalStore((state) => state.isSideBarOpened);
-  const setCurrentSideBarOption = useGlobalStore(
-    (state) => state.setCurrentSideBarOption
-  );
-  const pushCurrentSideBarOption = useGlobalStore(
-    (state) => state.pushCurrentSideBarOption
-  );
-  const clickedSideBarOptions = useGlobalStore(
-    (state) => state.clickedSideBarOptions
-  );
-
-  const [isItemClicked, setIsItemClicked] = useState(false);
-  const [isHover, setIsHover] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHover(true);
-  };
-  const handleMouseLeave = () => {
-    setIsHover(false);
-  };
-
-  useEffect(() => {
-    const isOptionInClickedArr = clickedSideBarOptions.filter(
-      (option) => option === text
-    ).length;
-    if (!isOptionInClickedArr) {
-      setIsItemClicked(false);
-    }
-  }, [clickedSideBarOptions, text]);
-
+const SideBarItem = ({
+  text,
+  icon,
+  isHover,
+  isSideBarOpened,
+  isItemClicked,
+  sideBarItemData,
+  isLoading,
+  handleMouseEnter,
+  handleMouseLeave,
+  handleClick,
+}: SideBarItemProps) => {
   return (
     <>
       <div
@@ -52,11 +41,7 @@ const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={() => {
-          setCurrentSideBarOption(text);
-          pushCurrentSideBarOption(text, clickedSideBarOptions);
-          setIsItemClicked((prev) => !prev);
-        }}
+        onClick={handleClick}
       >
         <div
           style={{
@@ -83,14 +68,23 @@ const SideBarItem = ({ text, icon, children }: SideBarItemProps) => {
       </div>
       <span
         style={{
-          transition: "opacity 0.3s ease, max-height 0.3s ease",
+          transition: "opacity 1s ease, max-height 0.7s ease",
           opacity: isItemClicked ? 1 : 0,
-          maxHeight: isItemClicked ? "100px" : "0",
+          maxHeight: isItemClicked
+            ? sideBarItemData
+              ? `${200 * sideBarItemData.length}px`
+              : "0"
+            : "0",
           overflow: "hidden",
           paddingLeft: "30px",
         }}
       >
-        <p>{children}</p>
+        {sideBarItemData &&
+          sideBarItemData.map((item) => {
+            return (
+              <DataCard isItemClicked={isItemClicked} sideBarItem={item} />
+            );
+          })}
       </span>
     </>
   );

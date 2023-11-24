@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "boundingBox": {
+        "minx": 127.65913919254527,
+        "maxx": 130.61459647729848,
+        "miny": 34.391467043196435,
+        "maxy": 35.916430281815316
+      },
+      "_id": "6530bcccec56255586af3bbc",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230904T092333_20230904T092352_050176_0609F8_DBD6_BRIDG_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230904T092333_20230904T092352_050176_0609F8_DBD6_BRIDG_RGB000102",
+      "desc": "2023-10-19T05:21:11.369Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230904T092333_20230904T092352_050176_0609F8_DBD6_BRIDG_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230904T092333_20230904T092352_050176_0609F8_DBD6_BRIDG_RGB000102.png",
+      "category": "bridge",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["bridge"],
+      "createdAt": "2023-10-19T05:21:16.155Z",
+      "updatedAt": "2023-10-19T05:21:16.155Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 125.58970560768228,
+        "maxx": 128.69751716462216,
+        "miny": 33.77033651041467,
+        "maxy": 35.91626273085789
+      },
+      "_id": "6530bcd5ec56255586af6314",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230921T093137_20230921T093206_050424_06126D_E131_BRIDG_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230921T093137_20230921T093206_050424_06126D_E131_BRIDG_RGB000102",
+      "desc": "2023-10-19T05:21:16.186Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230921T093137_20230921T093206_050424_06126D_E131_BRIDG_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230921T093137_20230921T093206_050424_06126D_E131_BRIDG_RGB000102.png",
+      "category": "bridge",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["bridge"],
+      "createdAt": "2023-10-19T05:21:25.039Z",
+      "updatedAt": "2023-10-19T05:21:25.039Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 125.22842602917477,
+        "maxx": 128.34593939118318,
+        "miny": 35.51855977906186,
+        "maxy": 37.41888967591107
+      },
+      "_id": "6530bcddec56255586af6318",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20231003T093207_20231003T093232_050599_061877_4E63_BRIDG_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20231003T093207_20231003T093232_050599_061877_4E63_BRIDG_RGB000102",
+      "desc": "2023-10-19T05:21:25.061Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20231003T093207_20231003T093232_050599_061877_4E63_BRIDG_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20231003T093207_20231003T093232_050599_061877_4E63_BRIDG_RGB000102.png",
+      "category": "bridge",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["bridge"],
+      "createdAt": "2023-10-19T05:21:33.576Z",
+      "updatedAt": "2023-10-19T05:21:33.576Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 125.58950750754778,
+        "maxx": 128.69713940143086,
+        "miny": 33.77120910761165,
+        "maxy": 35.91623984357857
+      },
+      "_id": "6530bce6ec56255586af6cf0",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20231003T093137_20231003T093207_050599_061877_9395_BRIDG_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20231003T093137_20231003T093207_050599_061877_9395_BRIDG_RGB000102",
+      "desc": "2023-10-19T05:21:33.598Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20231003T093137_20231003T093207_050599_061877_9395_BRIDG_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20231003T093137_20231003T093207_050599_061877_9395_BRIDG_RGB000102.png",
+      "category": "bridge",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["bridge"],
+      "createdAt": "2023-10-19T05:21:42.133Z",
+      "updatedAt": "2023-10-19T05:21:42.133Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 124.85360110289616,
+        "maxx": 128.04315935069093,
+        "miny": 37.02254764435524,
+        "maxy": 38.94593446122951
+      },
+      "_id": "6530bcefec56255586af6cf3",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20231003T093232_20231003T093257_050599_061877_6176_BRIDG_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20231003T093232_20231003T093257_050599_061877_6176_BRIDG_RGB000102",
+      "desc": "2023-10-19T05:21:42.156Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20231003T093232_20231003T093257_050599_061877_6176_BRIDG_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20231003T093232_20231003T093257_050599_061877_6176_BRIDG_RGB000102.png",
+      "category": "bridge",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["bridge"],
+      "createdAt": "2023-10-19T05:21:51.324Z",
+      "updatedAt": "2023-10-19T05:21:51.324Z",
+      "__v": 0
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "boundingBox": {
+        "minx": 34.34444444444444,
+        "maxx": 37.67299776492035,
+        "miny": 36.89552513657934,
+        "maxy": 38.77166666666665
+      },
+      "_id": "6530a526806b03e4243a8573",
+      "workspace": "lumir",
+      "store": "S1A_IW_SLC__1SDV_20230128T153424_20230209_IFG_DEM_EARQK_RGB000102",
+      "title": "S1A_IW_SLC__1SDV_20230128T153424_20230209_IFG_DEM_EARQK_RGB000102",
+      "desc": "2023-10-19T03:40:08.224Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_SLC__1SDV_20230128T153424_20230209_IFG_DEM_EARQK_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_SLC__1SDV_20230128T153424_20230209_IFG_DEM_EARQK_RGB000102.png",
+      "category": "earthquake",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["earthquake"],
+      "createdAt": "2023-10-19T03:40:22.928Z",
+      "updatedAt": "2023-10-19T03:40:22.928Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 34.710277777777776,
+        "maxx": 37.97312377860025,
+        "miny": 35.40277883108505,
+        "maxy": 37.280277777777776
+      },
+      "_id": "6530a534806b03e4243a8576",
+      "workspace": "lumir",
+      "store": "S1A_IW_SLC__1SDV_20230128T153358_20230209_IFG_DEM_EARQK_RGB000102",
+      "title": "S1A_IW_SLC__1SDV_20230128T153358_20230209_IFG_DEM_EARQK_RGB000102",
+      "desc": "2023-10-19T03:40:22.953Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_SLC__1SDV_20230128T153358_20230209_IFG_DEM_EARQK_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_SLC__1SDV_20230128T153358_20230209_IFG_DEM_EARQK_RGB000102.png",
+      "category": "earthquake",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["earthquake"],
+      "createdAt": "2023-10-19T03:40:36.253Z",
+      "updatedAt": "2023-10-19T03:40:36.253Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 34.71222222222222,
+        "maxx": 37.975146517420335,
+        "miny": 35.40196629654343,
+        "maxy": 37.27999999999999
+      },
+      "_id": "6530a540806b03e4243a8579",
+      "workspace": "lumir",
+      "store": "S1A_IW_SLC__1SDV_20230209T153357_20230221_IFG_DEM_EARQK_RGB000102",
+      "title": "S1A_IW_SLC__1SDV_20230209T153357_20230221_IFG_DEM_EARQK_RGB000102",
+      "desc": "2023-10-19T03:40:36.271Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_SLC__1SDV_20230209T153357_20230221_IFG_DEM_EARQK_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_SLC__1SDV_20230209T153357_20230221_IFG_DEM_EARQK_RGB000102.png",
+      "category": "earthquake",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["earthquake"],
+      "createdAt": "2023-10-19T03:40:48.864Z",
+      "updatedAt": "2023-10-19T03:40:48.864Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 165.19416666666666,
+        "maxx": 167.94072553537436,
+        "miny": -16.374876751004344,
+        "maxy": -14.032222222222225
+      },
+      "_id": "6530a549806b03e4243a857c",
+      "workspace": "lumir",
+      "store": "S1A_IW_SLC__1SDV_20230219T072226_20230303_IFG_DEM_EARQK_RGB000102",
+      "title": "S1A_IW_SLC__1SDV_20230219T072226_20230303_IFG_DEM_EARQK_RGB000102",
+      "desc": "2023-10-19T03:40:48.883Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_SLC__1SDV_20230219T072226_20230303_IFG_DEM_EARQK_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_SLC__1SDV_20230219T072226_20230303_IFG_DEM_EARQK_RGB000102.png",
+      "category": "earthquake",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["earthquake"],
+      "createdAt": "2023-10-19T03:40:57.379Z",
+      "updatedAt": "2023-10-19T03:40:57.379Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": -83.21555555555555,
+        "maxx": -80.73504630848366,
+        "miny": 7.374847989756256,
+        "maxy": 8.414999999999985
+      },
+      "_id": "6530a54e806b03e4243a857f",
+      "workspace": "lumir",
+      "store": "S1A_IW_SLC__1SDV_20230317T111526_20230410_IFG_DEM_EARQK_RGB000102",
+      "title": "S1A_IW_SLC__1SDV_20230317T111526_20230410_IFG_DEM_EARQK_RGB000102",
+      "desc": "2023-10-19T03:40:57.396Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_SLC__1SDV_20230317T111526_20230410_IFG_DEM_EARQK_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_SLC__1SDV_20230317T111526_20230410_IFG_DEM_EARQK_RGB000102.png",
+      "category": "earthquake",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["earthquake"],
+      "createdAt": "2023-10-19T03:41:02.846Z",
+      "updatedAt": "2023-10-19T03:41:02.846Z",
+      "__v": 0
+    }
+  ]
+}

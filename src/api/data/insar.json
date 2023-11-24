@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "boundingBox": {
+        "minx": 126.48573846160907,
+        "maxx": 126.84794628679754,
+        "miny": 35.87794403705825,
+        "maxy": 36.13405058012081
+      },
+      "_id": "6530b6c020d37a36584b09ff",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "Gunsan_map",
+      "desc": "Gunsan_map",
+      "imageUrl": "/assets/tiffPNGFIles/Gunsan_map.png",
+      "previewUrl": "/assets/previews/Gunsan_map.png",
+      "category": "INSAR",
+      "date": "Gunsan",
+      "author": "kim",
+      "optional": ["insar"],
+      "createdAt": "2023-10-19T04:55:28.441Z",
+      "updatedAt": "2023-10-19T04:55:28.441Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 128.92617935483398,
+        "maxx": 129.27889219002313,
+        "miny": 37.37037821890706,
+        "maxy": 37.619771132677165
+      },
+      "_id": "6530b6ca20d37a36584b0a02",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "Donghae_map_2",
+      "desc": "Donghae_map_2",
+      "imageUrl": "/assets/tiffPNGFIles/Donghae_map_2.png",
+      "previewUrl": "/assets/previews/Donghae_map_2.png",
+      "category": "INSAR",
+      "date": "Donghae",
+      "author": "kim",
+      "optional": ["insar"],
+      "createdAt": "2023-10-19T04:55:38.838Z",
+      "updatedAt": "2023-10-19T04:55:38.838Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": -99.46863518659366,
+        "maxx": -98.52353652000852,
+        "miny": 19.154873187994863,
+        "maxy": 19.823124770428805
+      },
+      "_id": "6530b6d620d37a36584b0a05",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "Maxico",
+      "desc": "Maxico",
+      "imageUrl": "/assets/tiffPNGFIles/Maxico.png",
+      "previewUrl": "/assets/previews/Maxico.png",
+      "category": "INSAR",
+      "date": "Maxico.tif",
+      "author": "kim",
+      "optional": ["insar"],
+      "createdAt": "2023-10-19T04:55:50.197Z",
+      "updatedAt": "2023-10-19T04:55:50.197Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 126.31537024953015,
+        "maxx": 127.33643728933504,
+        "miny": 37.33379471677339,
+        "maxy": 38.05576131057483
+      },
+      "_id": "6530b6fc20d37a36584b0a08",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "Seoul_Land_deformation",
+      "desc": "Seoul_Land_deformation",
+      "imageUrl": "/assets/tiffPNGFIles/Seoul_Land_deformation.png",
+      "previewUrl": "/assets/previews/Seoul_Land_deformation.png",
+      "category": "INSAR",
+      "date": "Seoul",
+      "author": "kim",
+      "optional": ["insar"],
+      "createdAt": "2023-10-19T04:56:28.375Z",
+      "updatedAt": "2023-10-19T04:56:28.375Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 129.0004694430146,
+        "maxx": 129.67691539012546,
+        "miny": 35.31983147079294,
+        "maxy": 35.79812658491173
+      },
+      "_id": "6530b70720d37a36584b0a0b",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "Ulsan_map_2",
+      "desc": "Ulsan_map_2",
+      "imageUrl": "/assets/tiffPNGFIles/Ulsan_map_2.png",
+      "previewUrl": "/assets/previews/Ulsan_map_2.png",
+      "category": "INSAR",
+      "date": "Ulsan",
+      "author": "kim",
+      "optional": ["insar"],
+      "createdAt": "2023-10-19T04:56:39.387Z",
+      "updatedAt": "2023-10-19T04:56:39.387Z",
+      "__v": 0
+    }
+  ]
+}

@@ -1,24 +1,21 @@
-import { KIND_OF_MAP_TILES } from "../constants/MapTiles";
-import useSideBarStore from "../store/SideBarStore";
+import { KIND_OF_MAP_TILES } from "@/constants/MapTiles";
+import { UserTracker } from "@/domain/model/UserTracker";
 
-type TileLayersProps = {
+type Props = {
+  setCurrentTileLayer: (layer: KIND_OF_MAP_TILES) => void;
+  handleMouseEnter: (e: React.MouseEvent) => void;
+  handleMouseLeave: (e: React.MouseEvent) => void;
   layers: KIND_OF_MAP_TILES[];
+  track: UserTracker["track"];
 };
 
-const TileLayers = ({ layers }: TileLayersProps) => {
-  const setCurrentTileLayer = useSideBarStore(
-    (state) => state.setCurrentTileLayer
-  );
-  const handleMouseEnter = (e: React.MouseEvent) => {
-    const img = e.target as HTMLImageElement;
-    img.classList.add("enlarged");
-  };
-
-  const handleMouseLeave = (e: React.MouseEvent) => {
-    const img = e.target as HTMLImageElement;
-    img.classList.remove("enlarged");
-  };
-
+const TileLayers = ({
+  setCurrentTileLayer,
+  handleMouseEnter,
+  handleMouseLeave,
+  layers,
+  track,
+}: Props) => {
   return (
     <div
       style={{
@@ -40,7 +37,9 @@ const TileLayers = ({ layers }: TileLayersProps) => {
             onMouseLeave={handleMouseLeave}
             onClick={() => {
               setCurrentTileLayer(layer);
+              track("tileLayers:tilelayer-button:click");
             }}
+            role={layer}
             style={{
               height: "60px",
               width: "60px",

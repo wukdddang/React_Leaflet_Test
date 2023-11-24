@@ -1,7 +1,7 @@
 import * as L from "leaflet";
 import { MAP_TILES } from "@/constants/MapTiles";
 import React from "react";
-import useGlobalStore from "@/store/GlobalStore";
+import useSideBarStore from "@/store/SideBarStore";
 import useDrawROIStore from "../store/DrawROIStore";
 import Map from "@/components/templates/Map";
 
@@ -9,7 +9,7 @@ const MapContainer = () => {
   const mapRef = React.useRef<L.Map | null>(null);
   const tileLayerRef: React.MutableRefObject<L.TileLayer | null> =
     React.useRef(null);
-  const currentTileLayer = useGlobalStore((state) => state.currentTileLayer);
+  const currentTileLayer = useSideBarStore((state) => state.currentTileLayer);
   const isROIEnabled = useDrawROIStore((state) => state.isROIEnabled);
   const setROIEnable = useDrawROIStore((state) => state.setROIEnable);
 

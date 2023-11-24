@@ -1,0 +1,119 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "boundingBox": {
+        "minx": 126.74971670142506,
+        "maxx": 126.80591839082108,
+        "miny": 37.19012557841622,
+        "maxy": 37.266609878642484
+      },
+      "_id": "6530b63820d37a36584af648",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "HwaSeong_map_2_ORIGN_RGB000102",
+      "desc": "HwaSeong_map_2_ORIGN_RGB000102",
+      "imageUrl": "/assets/tiffPNGFIles/20220720T235959_HwaSeong_map_2_ORIGN_RGB000102.png",
+      "previewUrl": "/assets/previews/20220720T235959_HwaSeong_map_2_ORIGN_RGB000102.png",
+      "category": "SAR",
+      "date": "20220720",
+      "time": "235959",
+      "author": "kim",
+      "optional": ["sar"],
+      "createdAt": "2023-10-19T04:53:12.576Z",
+      "updatedAt": "2023-10-19T04:53:12.576Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 127.08285706499677,
+        "maxx": 127.17776219524922,
+        "miny": 36.612751231852315,
+        "maxy": 36.68672160609697
+      },
+      "_id": "6530b66c20d37a36584b0020",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "Sejong_map_2_ORIGN_RGB000102",
+      "desc": "Sejong_map_2_ORIGN_RGB000102",
+      "imageUrl": "/assets/tiffPNGFIles/20220721T235959_Sejong_map_2_ORIGN_RGB000102.png",
+      "previewUrl": "/assets/previews/20220721T235959_Sejong_map_2_ORIGN_RGB000102.png",
+      "category": "SAR",
+      "date": "20220721",
+      "time": "235959",
+      "author": "kim",
+      "optional": ["sar"],
+      "createdAt": "2023-10-19T04:54:04.276Z",
+      "updatedAt": "2023-10-19T04:54:04.276Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 127.48081498291273,
+        "maxx": 127.55381729230828,
+        "miny": 36.351759106173766,
+        "maxy": 36.42983922705515
+      },
+      "_id": "6530b68520d37a36584b0023",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "Daecheong_map_2_ORIGN_RGB000102",
+      "desc": "Daecheong_map_2_ORIGN_RGB000102",
+      "imageUrl": "/assets/tiffPNGFIles/20220722T235959_Daecheong_map_2_ORIGN_RGB000102.png",
+      "previewUrl": "/assets/previews/20220722T235959_Daecheong_map_2_ORIGN_RGB000102.png",
+      "category": "SAR",
+      "date": "20220722",
+      "time": "235959",
+      "author": "kim",
+      "optional": ["sar"],
+      "createdAt": "2023-10-19T04:54:29.586Z",
+      "updatedAt": "2023-10-19T04:54:29.586Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 127.0725966486147,
+        "maxx": 127.17371037399676,
+        "miny": 36.850668286118925,
+        "maxy": 36.92797157929253
+      },
+      "_id": "6530b69020d37a36584b0026",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "Asan_map_2_ORIGN_RGB000102",
+      "desc": "Asan_map_2_ORIGN_RGB000102",
+      "imageUrl": "/assets/tiffPNGFIles/20220724T235959_Asan_map_2_ORIGN_RGB000102.png",
+      "previewUrl": "/assets/previews/20220724T235959_Asan_map_2_ORIGN_RGB000102.png",
+      "category": "SAR",
+      "date": "20220724",
+      "time": "235959",
+      "author": "kim",
+      "optional": ["sar"],
+      "createdAt": "2023-10-19T04:54:40.870Z",
+      "updatedAt": "2023-10-19T04:54:40.870Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 126.52988191337982,
+        "maxx": 127.21651998183764,
+        "miny": 34.972893350576506,
+        "maxy": 35.6957229933156
+      },
+      "_id": "655d9ea2c46d4bd5d732a172",
+      "workspace": "lumir",
+      "store": "lumir-geoserver-store",
+      "title": "이게 되나",
+      "desc": "ㄱㄱ",
+      "imageUrl": "/assets/tiffPNGFIles/output_colored.png",
+      "previewUrl": "/assets/previews/output_colored.png",
+      "category": "SAR",
+      "date": "output",
+      "author": "kim",
+      "optional": ["sar"],
+      "createdAt": "2023-11-22T06:24:34.941Z",
+      "updatedAt": "2023-11-22T06:24:34.941Z",
+      "__v": 0
+    }
+  ]
+}

@@ -13,7 +13,7 @@ export type SideBarOptionType =
   | "Earthquake Detection"
   | "Oilspill Detection";
 
-interface GlobalState {
+interface SideBarState {
   isSideBarOpened: boolean;
   currentSideBarOption: SideBarOptionType;
   clickedSideBarOptions: SideBarOptionType[];
@@ -27,7 +27,7 @@ interface GlobalState {
   setCurrentTileLayer: (currentTileLayer: KIND_OF_MAP_TILES) => void;
 }
 
-const useGlobalStore = create<GlobalState>((set) => ({
+const useSideBarStore = create<SideBarState>((set) => ({
   isSideBarOpened: false,
   currentSideBarOption: null,
   clickedSideBarOptions: [],
@@ -55,4 +55,4 @@ const useGlobalStore = create<GlobalState>((set) => ({
     }),
 }));
 
-export default useGlobalStore;
+export default useSideBarStore;

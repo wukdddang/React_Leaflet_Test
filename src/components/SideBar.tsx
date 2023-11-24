@@ -9,13 +9,12 @@ import { WiEarthquake } from "react-icons/wi";
 import { SlMap } from "react-icons/sl";
 import { FaShip } from "react-icons/fa6";
 import { IoColorFillOutline } from "react-icons/io5";
-import SideBarItem from "./SideBarItem";
-import useGlobalStore from "../store/GlobalStore";
-import DataCard from "./SideBarItem/DataCard";
+import SideBarItemContainer from "@/containers/SideBarItemContainer";
+import useSideBarStore from "../store/SideBarStore";
 
 const SideBar = () => {
-  const isSideBarOpened = useGlobalStore((state) => state.isSideBarOpened);
-  const toggleSideBarOpened = useGlobalStore(
+  const isSideBarOpened = useSideBarStore((state) => state.isSideBarOpened);
+  const toggleSideBarOpened = useSideBarStore(
     (state) => state.toggleSideBarOpened
   );
 
@@ -27,7 +26,7 @@ const SideBar = () => {
     <nav
       className="bg-white h-100 position-fixed"
       style={{
-        width: !isSideBarOpened ? "60px" : "300px",
+        width: !isSideBarOpened ? "60px" : "400px",
         left: 0,
         zIndex: 1,
         transition: "0.3s ease",
@@ -61,48 +60,42 @@ const SideBar = () => {
           width: "100%",
         }}
       >
-        <SideBarItem
+        <SideBarItemContainer
           text="BookMark"
           icon={<BsBookmarks size={20} role="BookMark" />}
-        >
-          <DataCard text="BookMark" />
-        </SideBarItem>
-        <SideBarItem
+        ></SideBarItemContainer>
+        <SideBarItemContainer
           text="Range Search"
           icon={<BsBoundingBoxCircles size={20} role="RangeSearch" />}
-        >
-          <DataCard text="Range Search" />
-        </SideBarItem>
-        <SideBarItem text="SAR" icon={<SlMap size={20} role="SAR" />}>
-          {"hi"}
-        </SideBarItem>
-        <SideBarItem text="InSAR" icon={<BiSolidAnalyse size={20} />}>
-          {"hi"}
-        </SideBarItem>
-        <SideBarItem text="Ship Detection" icon={<FaShip size={20} />}>
-          {"hi"}
-        </SideBarItem>
-        <SideBarItem
+        ></SideBarItemContainer>
+        <SideBarItemContainer
+          text="SAR"
+          icon={<SlMap size={20} role="SAR" />}
+        ></SideBarItemContainer>
+        <SideBarItemContainer
+          text="InSAR"
+          icon={<BiSolidAnalyse size={20} />}
+        ></SideBarItemContainer>
+        <SideBarItemContainer
+          text="Ship Detection"
+          icon={<FaShip size={20} />}
+        ></SideBarItemContainer>
+        <SideBarItemContainer
           text="Bridge Detection"
           icon={<BiObjectsHorizontalCenter size={20} />}
-        >
-          {"hi"}
-        </SideBarItem>
-        <SideBarItem text="Water Detection" icon={<BiWater size={20} />}>
-          {"hi"}
-        </SideBarItem>
-        <SideBarItem
+        ></SideBarItemContainer>
+        <SideBarItemContainer
+          text="Water Detection"
+          icon={<BiWater size={20} />}
+        ></SideBarItemContainer>
+        <SideBarItemContainer
           text="Earthquake Detection"
           icon={<WiEarthquake size={20} />}
-        >
-          {"hi"}
-        </SideBarItem>
-        <SideBarItem
+        ></SideBarItemContainer>
+        <SideBarItemContainer
           text="Oilspill Detection"
           icon={<IoColorFillOutline size={20} />}
-        >
-          {"hi"}
-        </SideBarItem>
+        ></SideBarItemContainer>
       </div>
     </nav>
   );

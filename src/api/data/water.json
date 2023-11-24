@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "boundingBox": {
+        "minx": 127.65913919254525,
+        "maxx": 130.61459647729848,
+        "miny": 34.39146733481848,
+        "maxy": 35.91644736113978
+      },
+      "_id": "6530f464705b959234df1c2b",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230904T092333_20230904T092352_050176_0609F8_DBD6_GIS_WATER_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230904T092333_20230904T092352_050176_0609F8_DBD6_GIS_WATER_RGB000102",
+      "desc": "2023-10-19T09:18:17.664Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230904T092333_20230904T092352_050176_0609F8_DBD6_GIS_WATER_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230904T092333_20230904T092352_050176_0609F8_DBD6_GIS_WATER_RGB000102.png",
+      "category": "water",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["water"],
+      "createdAt": "2023-10-19T09:18:28.895Z",
+      "updatedAt": "2023-10-19T09:18:28.895Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 125.58970560768228,
+        "maxx": 128.69751716462218,
+        "miny": 33.770384259323535,
+        "maxy": 35.91627981002825
+      },
+      "_id": "6530f474705b959234df1c2e",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230921T093137_20230921T093206_050424_06126D_E131_GIS_WATER_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230921T093137_20230921T093206_050424_06126D_E131_GIS_WATER_RGB000102",
+      "desc": "2023-10-19T09:18:28.921Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230921T093137_20230921T093206_050424_06126D_E131_GIS_WATER_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230921T093137_20230921T093206_050424_06126D_E131_GIS_WATER_RGB000102.png",
+      "category": "water",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["water"],
+      "createdAt": "2023-10-19T09:18:44.446Z",
+      "updatedAt": "2023-10-19T09:18:44.446Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 124.85380673001265,
+        "maxx": 128.0433649778074,
+        "miny": 37.022684297110835,
+        "maxy": 38.945977320410734
+      },
+      "_id": "6530f482705b959234df1c31",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230921T093231_20230921T093257_050424_06126D_D84C_GIS_WATER_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230921T093231_20230921T093257_050424_06126D_D84C_GIS_WATER_RGB000102",
+      "desc": "2023-10-19T09:18:44.467Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230921T093231_20230921T093257_050424_06126D_D84C_GIS_WATER_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230921T093231_20230921T093257_050424_06126D_D84C_GIS_WATER_RGB000102.png",
+      "category": "water",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["water"],
+      "createdAt": "2023-10-19T09:18:58.966Z",
+      "updatedAt": "2023-10-19T09:18:58.966Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 125.22842602917477,
+        "maxx": 128.34593939118315,
+        "miny": 35.518612009891605,
+        "maxy": 37.41890816191804
+      },
+      "_id": "6530f490705b959234df1c34",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20231003T093207_20231003T093232_050599_061877_4E63_GIS_WATER_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20231003T093207_20231003T093232_050599_061877_4E63_GIS_WATER_RGB000102",
+      "desc": "2023-10-19T09:18:58.987Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20231003T093207_20231003T093232_050599_061877_4E63_GIS_WATER_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20231003T093207_20231003T093232_050599_061877_4E63_GIS_WATER_RGB000102.png",
+      "category": "water",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["water"],
+      "createdAt": "2023-10-19T09:19:12.847Z",
+      "updatedAt": "2023-10-19T09:19:12.847Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 125.58950750754778,
+        "maxx": 128.69713940143086,
+        "miny": 33.77125968730728,
+        "maxy": 35.91625692272787
+      },
+      "_id": "6530f4a2705b959234df1c37",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20231003T093137_20231003T093207_050599_061877_9395_GIS_WATER_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20231003T093137_20231003T093207_050599_061877_9395_GIS_WATER_RGB000102",
+      "desc": "2023-10-19T09:19:12.872Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20231003T093137_20231003T093207_050599_061877_9395_GIS_WATER_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20231003T093137_20231003T093207_050599_061877_9395_GIS_WATER_RGB000102.png",
+      "category": "water",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["water"],
+      "createdAt": "2023-10-19T09:19:30.019Z",
+      "updatedAt": "2023-10-19T09:19:30.019Z",
+      "__v": 0
+    }
+  ]
+}

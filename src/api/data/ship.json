@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "data": [
+    {
+      "boundingBox": {
+        "minx": 102.24300859385221,
+        "maxx": 104.79727827271766,
+        "miny": -1.4029881493677256,
+        "maxy": 0.5886059183798916
+      },
+      "_id": "65309dcd806b03e424387ffe",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230831T112520_20230831T112545_050118_06080B_AE24_SHIPD_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230831T112520_20230831T112545_050118_06080B_AE24_SHIPD_RGB000102",
+      "desc": "2023-10-19T03:08:47.489Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230831T112520_20230831T112545_050118_06080B_AE24_SHIPD_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230831T112520_20230831T112545_050118_06080B_AE24_SHIPD_RGB000102.png",
+      "category": "ship",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["ship"],
+      "createdAt": "2023-10-19T03:09:01.603Z",
+      "updatedAt": "2023-10-19T03:09:01.603Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 101.9265103733981,
+        "maxx": 104.47862409558165,
+        "miny": 0.10885093558951033,
+        "maxy": 2.0960855211375353
+      },
+      "_id": "65309dda806b03e424388001",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230831T112545_20230831T112610_050118_06080B_4B4D_SHIPD_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230831T112545_20230831T112610_050118_06080B_4B4D_SHIPD_RGB000102",
+      "desc": "2023-10-19T03:09:01.632Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230831T112545_20230831T112610_050118_06080B_4B4D_SHIPD_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230831T112545_20230831T112610_050118_06080B_4B4D_SHIPD_RGB000102.png",
+      "category": "ship",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["ship"],
+      "createdAt": "2023-10-19T03:09:14.227Z",
+      "updatedAt": "2023-10-19T03:09:14.227Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 23.397484920415174,
+        "maxx": 27.29024437261871,
+        "miny": 46.917707013195695,
+        "maxy": 48.82412787796234
+      },
+      "_id": "65309dee806b03e424388004",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230901T042927_20230901T042952_050129_060869_5AB9_SHIPD_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230901T042927_20230901T042952_050129_060869_5AB9_SHIPD_RGB000102",
+      "desc": "2023-10-19T03:09:14.250Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230901T042927_20230901T042952_050129_060869_5AB9_SHIPD_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230901T042927_20230901T042952_050129_060869_5AB9_SHIPD_RGB000102.png",
+      "category": "ship",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["ship"],
+      "createdAt": "2023-10-19T03:09:34.441Z",
+      "updatedAt": "2023-10-19T03:09:34.441Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 23.058745246851366,
+        "maxx": 26.845952653170855,
+        "miny": 45.421715292014056,
+        "maxy": 47.3263605140634
+      },
+      "_id": "65309e02806b03e424388007",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230901T042952_20230901T043017_050129_060869_6F9F_SHIPD_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230901T042952_20230901T043017_050129_060869_6F9F_SHIPD_RGB000102",
+      "desc": "2023-10-19T03:09:34.463Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230901T042952_20230901T043017_050129_060869_6F9F_SHIPD_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230901T042952_20230901T043017_050129_060869_6F9F_SHIPD_RGB000102.png",
+      "category": "ship",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["ship"],
+      "createdAt": "2023-10-19T03:09:54.170Z",
+      "updatedAt": "2023-10-19T03:09:54.170Z",
+      "__v": 0
+    },
+    {
+      "boundingBox": {
+        "minx": 31.49687276626434,
+        "maxx": 35.34956735679614,
+        "miny": 47.38430695528443,
+        "maxy": 49.28342307713528
+      },
+      "_id": "65309e16806b03e4243889e1",
+      "workspace": "lumir",
+      "store": "S1A_IW_GRDH_1SDV_20230901T153727_20230901T153752_050136_0608A6_0D60_SHIPD_RGB000102",
+      "title": "S1A_IW_GRDH_1SDV_20230901T153727_20230901T153752_050136_0608A6_0D60_SHIPD_RGB000102",
+      "desc": "2023-10-19T03:09:54.196Z",
+      "imageUrl": "/assets/tiffPNGFIles/S1A_IW_GRDH_1SDV_20230901T153727_20230901T153752_050136_0608A6_0D60_SHIPD_RGB000102.png",
+      "previewUrl": "/assets/previews/S1A_IW_GRDH_1SDV_20230901T153727_20230901T153752_050136_0608A6_0D60_SHIPD_RGB000102.png",
+      "category": "ship",
+      "date": "S1A",
+      "author": "kim",
+      "optional": ["ship"],
+      "createdAt": "2023-10-19T03:10:14.412Z",
+      "updatedAt": "2023-10-19T03:10:14.412Z",
+      "__v": 0
+    }
+  ]
+}
