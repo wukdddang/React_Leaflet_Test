@@ -10,18 +10,18 @@ import { SlMap } from "react-icons/sl";
 import { FaShip } from "react-icons/fa6";
 import { IoColorFillOutline } from "react-icons/io5";
 import SideBarItemContainer from "@/containers/SideBarItemContainer";
-import useSideBarStore from "../store/SideBarStore";
 
-const SideBar = () => {
-  const isSideBarOpened = useSideBarStore((state) => state.isSideBarOpened);
-  const toggleSideBarOpened = useSideBarStore(
-    (state) => state.toggleSideBarOpened
-  );
+type Props = {
+  isSideBarOpened: boolean;
+  toggleSideBarOpened: () => void;
+  handleToggleSideBar: (e: React.MouseEvent) => void;
+};
 
-  const handleToggleSideBar = (e: React.MouseEvent) => {
-    (e.target as HTMLElement).classList.toggle("open-sidebar");
-  };
-
+const SideBar = ({
+  isSideBarOpened,
+  toggleSideBarOpened,
+  handleToggleSideBar,
+}: Props) => {
   return (
     <nav
       className="bg-white h-100 position-fixed"

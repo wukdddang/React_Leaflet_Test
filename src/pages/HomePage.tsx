@@ -1,6 +1,6 @@
-import NavBar from "@/components/NavBar";
-import SideBar from "@/components/SideBar";
 import MapContainer from "@/containers/MapContainer";
+import NavBarContainer from "@/containers/NavBarContainer";
+import SideBarContainer from "@/containers/SideBarContainer";
 import TileLayersContainer from "@/containers/TileLayersContainer";
 
 const HomePage = () => {
@@ -10,8 +10,8 @@ const HomePage = () => {
         height: "100vh",
       }}
     >
-      <NavBar />
-      <SideBar />
+      <NavBarContainer />
+      <SideBarContainer />
       <TileLayersContainer
         layers={["google_satellite", "leaflet_osm", "leaflet_dark"]}
       />

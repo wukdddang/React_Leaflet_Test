@@ -36,7 +36,6 @@ const SideBarItem = ({
           justifyContent: "flex-start",
           alignItems: "center",
           backgroundColor: isHover ? "lightblue" : "",
-          transition: "0.2s ease",
           width: "100%",
         }}
         onMouseEnter={handleMouseEnter}
@@ -59,17 +58,16 @@ const SideBarItem = ({
         <span
           style={{
             whiteSpace: "nowrap",
-            transition: "0.3s ease",
-            opacity: !isSideBarOpened ? 0 : 1,
           }}
         >
           {text}
         </span>
       </div>
-      <span
+      <div
         style={{
-          transition: "opacity 1s ease, max-height 0.7s ease",
-          opacity: isItemClicked ? 1 : 0,
+          transition: isItemClicked
+            ? "max-height 1s ease"
+            : "max-height 0.3s ease-out-cubic",
           maxHeight: isItemClicked
             ? sideBarItemData
               ? `${200 * sideBarItemData.length}px`
@@ -82,10 +80,10 @@ const SideBarItem = ({
         {sideBarItemData &&
           sideBarItemData.map((item) => {
             return (
-              <DataCard isItemClicked={isItemClicked} sideBarItem={item} />
+              <DataCard isItemClicked={isItemClicked} sideBarItemProps={item} />
             );
           })}
-      </span>
+      </div>
     </>
   );
 };
