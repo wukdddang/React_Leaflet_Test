@@ -27,6 +27,9 @@ const SideBarItem = ({
   handleMouseLeave,
   handleClick,
 }: SideBarItemProps) => {
+  const contentHeight =
+    isItemClicked && sideBarItemData ? 70 * sideBarItemData.length : 0;
+
   return (
     <>
       <div
@@ -65,16 +68,10 @@ const SideBarItem = ({
       </div>
       <div
         style={{
-          transition: isItemClicked
-            ? "max-height 1s ease"
-            : "max-height 0.3s ease-out-cubic",
-          maxHeight: isItemClicked
-            ? sideBarItemData
-              ? `${200 * sideBarItemData.length}px`
-              : "0"
-            : "0",
           overflow: "hidden",
           paddingLeft: "30px",
+          height: contentHeight,
+          transition: "height 0.5s ease", // Add transition to height
         }}
       >
         {sideBarItemData &&
