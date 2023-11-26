@@ -1,8 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { NavigateFunction } from "react-router";
 
-const NavBar = () => {
-  const navigate = useNavigate();
+type Props = {
+  navigate: NavigateFunction;
+};
 
+const NavBar = ({ navigate }: Props) => {
   return (
     <nav
       className="nav justify-content-between align-items-md-center px-4 border-bottom position-fixed bg-light-subtle"

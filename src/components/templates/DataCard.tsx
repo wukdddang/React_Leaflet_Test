@@ -2,14 +2,14 @@ import { CategoryData } from "@/api/getDataByCategory";
 
 type DataCardType = {
   isItemClicked: boolean;
-  sideBarItem: CategoryData;
+  sideBarItemProps: CategoryData;
 };
 
-const DataCard = ({ isItemClicked, sideBarItem }: DataCardType) => {
+const DataCard = ({ isItemClicked, sideBarItemProps }: DataCardType) => {
   return (
     <div
       className="form-check"
-      key={sideBarItem._id}
+      key={sideBarItemProps._id}
       style={{
         display: "flex",
         justifyContent: "center",
@@ -20,7 +20,7 @@ const DataCard = ({ isItemClicked, sideBarItem }: DataCardType) => {
         className="form-check-input"
         type="checkbox"
         value=""
-        id={sideBarItem._id}
+        id={sideBarItemProps._id}
         style={{
           width: "20px",
           height: "50px",
@@ -29,7 +29,7 @@ const DataCard = ({ isItemClicked, sideBarItem }: DataCardType) => {
       />
       <label
         className="form-check-label"
-        htmlFor={sideBarItem._id}
+        htmlFor={sideBarItemProps._id}
         style={{
           width: "100%",
           display: "flex",
@@ -37,12 +37,10 @@ const DataCard = ({ isItemClicked, sideBarItem }: DataCardType) => {
         }}
       >
         <img
-          src={sideBarItem.previewUrl}
+          src={sideBarItemProps.previewUrl}
           style={{
             width: "100px",
             height: "60px",
-            opacity: isItemClicked ? 1 : 0,
-            transition: "opacity 1s ease",
           }}
         ></img>
         <div
@@ -55,22 +53,20 @@ const DataCard = ({ isItemClicked, sideBarItem }: DataCardType) => {
         >
           <span
             style={{
-              opacity: isItemClicked ? 1 : 0,
               fontSize: "14px",
               whiteSpace: "nowrap",
               overflow: "hidden",
               textOverflow: "ellipsis",
             }}
           >
-            {sideBarItem.title}
+            {sideBarItemProps.title}
           </span>
           <span
             style={{
-              opacity: isItemClicked ? 1 : 0,
               fontSize: "14px",
             }}
           >
-            {sideBarItem.createdAt}
+            {sideBarItemProps.createdAt}
           </span>
         </div>
       </label>
