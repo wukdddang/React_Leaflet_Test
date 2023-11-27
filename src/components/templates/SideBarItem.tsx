@@ -1,6 +1,7 @@
 import { CategoryData } from "@/api/getDataByCategory";
 import { SideBarOptionType } from "../../store/SideBarStore";
-import DataCard from "./DataCard";
+import { BiChevronRight } from "react-icons/bi";
+import DataCardContainer from "@/containers/DataCardContainer";
 
 export type SideBarItemProps = {
   text: SideBarOptionType;
@@ -28,7 +29,7 @@ const SideBarItem = ({
   handleClick,
 }: SideBarItemProps) => {
   const contentHeight =
-    isItemClicked && sideBarItemData ? 70 * sideBarItemData.length : 0;
+    isItemClicked && sideBarItemData ? 90 * sideBarItemData.length : 0;
 
   return (
     <>
@@ -40,6 +41,7 @@ const SideBarItem = ({
           alignItems: "center",
           backgroundColor: isHover ? "lightblue" : "",
           width: "100%",
+          cursor: "pointer",
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -70,25 +72,36 @@ const SideBarItem = ({
         style={{
           overflow: "hidden",
           paddingLeft: "30px",
-          height: contentHeight,
-          transition: "height 0.5s ease", // Add transition to height
+          height: isSideBarOpened ? contentHeight : 0,
+          transition: "height 0.5s ease", // height 값에 따른 transition 효과 추가
         }}
       >
         {!isLoading ? (
           sideBarItemData &&
           sideBarItemData.map((item) => {
-            return (
-              <DataCard
-                isItemClicked={isItemClicked}
-                sideBarItemProps={item}
-                key={item._id}
-              />
-            );
+            return <DataCardContainer sideBarItemProps={item} key={item._id} />;
           })
         ) : (
           <div>로딩중...</div>
         )}
       </div>
+      {isSideBarOpened && isItemClicked && (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {/* TODO: Pagination */}
+
+          <BiChevronRight
+            size={30}
+            style={{
+              cursor: "pointer",
+            }}
+          />
+        </div>
+      )}
     </>
   );
 };

@@ -33,30 +33,40 @@ const SideBar = ({
         overflowY: "scroll",
       }}
     >
-      <button
+      <div
         style={{
-          position: "absolute",
-          top: "70px",
-          right: "10px",
-          cursor: "pointer",
+          position: "sticky",
+          background: "#fff",
+          zIndex: 2,
+          top: "60px",
+          height: "60px",
+          width: "100%",
         }}
-        onClick={(e) => {
-          toggleSideBarOpened();
-          handleToggleSideBar(e);
-        }}
-        className={`btn ${
-          isSideBarOpened ? "btn-outline-primary" : "btn-primary"
-        }`}
       >
-        {!isSideBarOpened ? <FaChevronRight /> : <FaChevronLeft />}
-      </button>
+        <button
+          style={{
+            position: "absolute",
+            cursor: "pointer",
+            top: "10px",
+            right: "10px",
+          }}
+          onClick={(e) => {
+            toggleSideBarOpened();
+            handleToggleSideBar(e);
+          }}
+          className={`btn ${
+            isSideBarOpened ? "btn-outline-primary" : "btn-primary"
+          }`}
+        >
+          {!isSideBarOpened ? <FaChevronRight /> : <FaChevronLeft />}
+        </button>
+      </div>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           position: "absolute",
           top: "130px",
-          cursor: "pointer",
           width: "100%",
         }}
       >

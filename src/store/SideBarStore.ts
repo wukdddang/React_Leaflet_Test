@@ -37,7 +37,6 @@ const useSideBarStore = create<SideBarState>((set) => ({
       return {
         isSideBarOpened: !state.isSideBarOpened,
         currentSideBarOption: null,
-        clickedSideBarOptions: [],
       };
     }),
   setCurrentSideBarOption: (currentSideBarOption) =>

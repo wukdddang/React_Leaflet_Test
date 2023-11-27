@@ -4,8 +4,8 @@ import { describe, expect, test } from "vitest";
 import useSideBarStore from "@/store/SideBarStore";
 import SideBar from "@/components/templates/SideBar";
 
-describe("zustand를 사용한 GlobalStore의 전역 상태가 잘 저장되는지 테스트한다.", () => {
-  test("초기 상태의 SideBarOption 값을 확인한다.", () => {
+describe("SideBar 컴포넌트의 통합 테스트를 수행한다.", () => {
+  test("초기 상태의 SideBarOption 값은 Null이다.", () => {
     const { result } = renderHook(() =>
       useSideBarStore((state) => state.currentSideBarOption)
     );
@@ -52,4 +52,6 @@ describe("zustand를 사용한 GlobalStore의 전역 상태가 잘 저장되는�
       expect.arrayContaining(["BookMark", "Range Search", "SAR"])
     );
   });
+
+  test("SideBar가 닫혔을 때 SideBarItemContainer들이 렌더링되지 않아야 한다. ");
 });

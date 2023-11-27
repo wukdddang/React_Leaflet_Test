@@ -4,6 +4,7 @@ import React from "react";
 import useSideBarStore from "@/store/SideBarStore";
 import useDrawROIStore from "../store/DrawROIStore";
 import Map from "@/components/templates/Map";
+import useDataCardStore from "@/store/DataCardStore";
 
 const MapContainer = () => {
   const mapRef = React.useRef<L.Map | null>(null);
@@ -12,6 +13,7 @@ const MapContainer = () => {
   const currentTileLayer = useSideBarStore((state) => state.currentTileLayer);
   const isROIEnabled = useDrawROIStore((state) => state.isROIEnabled);
   const setROIEnable = useDrawROIStore((state) => state.setROIEnable);
+  const currentDataCard = useDataCardStore((state) => state.currentDataCard);
 
   const mapParams: L.MapOptions = {
     center: [36, 127.5],
@@ -54,6 +56,10 @@ const MapContainer = () => {
       ).addTo(mapRef.current);
     }
   }, [currentTileLayer]);
+
+  // TODO: currentDataCard가 변경되면 Map에 추가할 수 있도록 로직 구성
+
+  React.useEffect(() => {}, [currentDataCard]);
 
   return (
     <Map

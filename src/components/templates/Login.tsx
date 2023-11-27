@@ -28,11 +28,8 @@ const Login = ({ track }: Props) => {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="이메일 주소를 입력하세요"
           />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
         </div>
         <div className="form-group">
           <label htmlFor="exampleInputPassword1">비밀번호</label>
@@ -40,7 +37,7 @@ const Login = ({ track }: Props) => {
             type="password"
             className="form-control"
             id="exampleInputPassword1"
-            placeholder="Password"
+            placeholder="비밀번호를 입력하세요"
           />
         </div>
         <div className="form-check">

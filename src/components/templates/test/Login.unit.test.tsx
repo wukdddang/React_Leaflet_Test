@@ -9,7 +9,7 @@ describe("Login 로직 단위 테스트", () => {
     const rendered = render(<Login track={track} />);
 
     // when
-    rendered.getByText("Login").click();
+    rendered.getByText("로그인").click();
 
     // then
     expect(track).toHaveBeenNthCalledWith(1, "loginPage:login-button:click");
