@@ -1,30 +1,35 @@
 import { CategoryData } from "@/api/getDataByCategory";
+import React from "react";
 
-type DataCardType = {
-  isItemClicked: boolean;
+type Props = {
+  handleCardClick: (e: React.MouseEvent<HTMLDivElement>) => void;
   sideBarItemProps: CategoryData;
 };
 
-const DataCard = ({ isItemClicked, sideBarItemProps }: DataCardType) => {
+const DataCard = ({ handleCardClick, sideBarItemProps }: Props) => {
   return (
     <div
       className="form-check"
-      key={sideBarItemProps._id}
       style={{
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
+        width: "100%",
+        margin: "20px 0",
+        cursor: "pointer",
       }}
     >
       <input
         className="form-check-input"
         type="checkbox"
-        value=""
+        value={sideBarItemProps.title}
         id={sideBarItemProps._id}
+        onClick={handleCardClick}
         style={{
           width: "20px",
           height: "50px",
-          border: "1px solid #000",
+          border: "1px solid #aaa",
+          cursor: "pointer",
         }}
       />
       <label
@@ -33,22 +38,28 @@ const DataCard = ({ isItemClicked, sideBarItemProps }: DataCardType) => {
         style={{
           width: "100%",
           display: "flex",
+          gap: "10px",
           cursor: "pointer",
         }}
       >
         <img
           src={sideBarItemProps.previewUrl}
           style={{
+            display: "flex",
             width: "100px",
             height: "60px",
+            flexShrink: 0,
+            borderRadius: "10px",
+            border: "1px solid #aaa",
           }}
-        ></img>
+        />
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            maxWidth: "200px",
+            maxWidth: "220px",
+            flexShrink: 0,
           }}
         >
           <span

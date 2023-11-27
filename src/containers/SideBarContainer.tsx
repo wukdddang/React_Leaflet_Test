@@ -1,5 +1,6 @@
 import useSideBarStore from "../store/SideBarStore";
 import SideBar from "@/components/templates/SideBar";
+import React from "react";
 
 const SideBarContainer = () => {
   const isSideBarOpened = useSideBarStore((state) => state.isSideBarOpened);
