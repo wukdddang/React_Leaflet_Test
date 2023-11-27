@@ -2,7 +2,7 @@ import { render, screen, renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, test } from "vitest";
 import useSideBarStore from "@/store/SideBarStore";
-import SideBar from "@/components/SideBar";
+import SideBar from "@/components/templates/SideBar";
 
 describe("zustand를 사용한 GlobalStore의 전역 상태가 잘 저장되는지 테스트한다.", () => {
   test("초기 상태의 SideBarOption 값을 확인한다.", () => {

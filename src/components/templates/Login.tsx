@@ -22,7 +22,7 @@ const Login = ({ track }: Props) => {
         className="h-100 d-flex flex-column justify-content-center"
       >
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email address</label>
+          <label htmlFor="exampleInputEmail1">이메일 주소</label>
           <input
             type="email"
             className="form-control"
@@ -35,7 +35,7 @@ const Login = ({ track }: Props) => {
           </small>
         </div>
         <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Password</label>
+          <label htmlFor="exampleInputPassword1">비밀번호</label>
           <input
             type="password"
             className="form-control"
@@ -50,7 +50,7 @@ const Login = ({ track }: Props) => {
             id="exampleCheck1"
           />
           <label className="form-check-label" htmlFor="exampleCheck1">
-            Check me out
+            로그인 정보 유지하기
           </label>
         </div>
         <Button
@@ -61,7 +61,7 @@ const Login = ({ track }: Props) => {
             track("loginPage:login-button:click");
           }}
         >
-          Login
+          로그인
         </Button>
       </form>
     </div>

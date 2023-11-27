@@ -63,39 +63,39 @@ const SideBar = ({
         <SideBarItemContainer
           text="BookMark"
           icon={<BsBookmarks size={20} role="BookMark" />}
-        ></SideBarItemContainer>
+        />
         <SideBarItemContainer
           text="Range Search"
           icon={<BsBoundingBoxCircles size={20} role="RangeSearch" />}
-        ></SideBarItemContainer>
+        />
         <SideBarItemContainer
           text="SAR"
           icon={<SlMap size={20} role="SAR" />}
-        ></SideBarItemContainer>
+        />
         <SideBarItemContainer
           text="InSAR"
           icon={<BiSolidAnalyse size={20} />}
-        ></SideBarItemContainer>
+        />
         <SideBarItemContainer
           text="Ship Detection"
           icon={<FaShip size={20} />}
-        ></SideBarItemContainer>
+        />
         <SideBarItemContainer
           text="Bridge Detection"
           icon={<BiObjectsHorizontalCenter size={20} />}
-        ></SideBarItemContainer>
+        />
         <SideBarItemContainer
           text="Water Detection"
           icon={<BiWater size={20} />}
-        ></SideBarItemContainer>
+        />
         <SideBarItemContainer
           text="Earthquake Detection"
           icon={<WiEarthquake size={20} />}
-        ></SideBarItemContainer>
+        />
         <SideBarItemContainer
           text="Oilspill Detection"
           icon={<IoColorFillOutline size={20} />}
-        ></SideBarItemContainer>
+        />
       </div>
     </nav>
   );

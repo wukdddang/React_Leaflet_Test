@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useSideBarStore, { SideBarOptionType } from "../store/SideBarStore";
 import getDataByCategoryAndPage from "@/api/getDataByCategory";
-import SideBarItem from "@/components/SideBarItem";
+import SideBarItem from "@/components/templates/SideBarItem";
 import { useQuery } from "@tanstack/react-query";
 
 export type SideBarItemProps = {

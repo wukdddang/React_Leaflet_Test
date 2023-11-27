@@ -3,7 +3,7 @@ import { describe, expect, test, vi } from "vitest";
 import TileLayers from "../TileLayers";
 import userEvent from "@testing-library/user-event";
 
-describe("TileLayers 컴포넌트 테스트", () => {
+describe("TileLayers 컴포넌트 UI 단위 테스트", () => {
   test("TileLayer 버튼을 클릭하면, tileLayers:tilelayer-button:click이 argument로 전달된다.", async () => {
     // given
     const mockSetCurrentTileLayer = vi.fn();

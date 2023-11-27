@@ -1,6 +1,6 @@
 import { CategoryData } from "@/api/getDataByCategory";
-import { SideBarOptionType } from "../store/SideBarStore";
-import DataCard from "./templates/DataCard";
+import { SideBarOptionType } from "../../store/SideBarStore";
+import DataCard from "./DataCard";
 
 export type SideBarItemProps = {
   text: SideBarOptionType;

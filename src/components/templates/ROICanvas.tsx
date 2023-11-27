@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import useDrawROIStore from "../store/DrawROIStore";
+import useDrawROIStore from "../../store/DrawROIStore";
 import * as L from "leaflet";
 
 type ROICanvas = {

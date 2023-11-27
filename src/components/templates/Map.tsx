@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import ROICanvas from "@/components/ROICanvas";
+import ROICanvas from "@/components/templates/ROICanvas";
 import Button from "@/components/molecules/Button";
 
 const mapStyles: CSSProperties = {
