@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
-import ROICanvas from "@/components/templates/ROICanvas";
-import Button from "@/components/molecules/Button";
+import ROICanvasContainer from "@/containers/ROICanvasContainer";
+import MapButtons from "./MapButtons";
 
 const mapStyles: CSSProperties = {
   overflow: "hidden",
@@ -9,7 +9,7 @@ const mapStyles: CSSProperties = {
 };
 
 type Props = {
-  currentMap: L.Map;
+  currentMap: L.Map | null;
   isROIEnabled: boolean;
   setROIEnable: (currentROI: boolean) => void;
 };
@@ -25,39 +25,13 @@ const Map = ({ currentMap, isROIEnabled, setROIEnable }: Props) => {
           top: 0,
           zIndex: 0,
         }}
-      ></div>
-      <ROICanvas currentMap={currentMap} />
-      <div
-        style={{
-          position: "absolute",
-          bottom: "10px",
-          left: "100px",
-          transition: "0.3s ease",
-        }}
-      >
-        <Button
-          className="btn btn-primary"
-          onClick={() => {
-            if (isROIEnabled) {
-              currentMap?.dragging.enable();
-              setROIEnable(false);
-            } else {
-              currentMap?.dragging.disable();
-              setROIEnable(true);
-            }
-          }}
-        >
-          {isROIEnabled ? "Enable Pan" : "Disable Pan"}
-        </Button>
-        <Button
-          className="btn btn-success"
-          onClick={() => {
-            setROIEnable(true);
-          }}
-        >
-          Draw ROI
-        </Button>
-      </div>
+      />
+      <ROICanvasContainer currentMap={currentMap} />
+      <MapButtons
+        currentMap={currentMap}
+        isROIEnabled={isROIEnabled}
+        setROIEnable={setROIEnable}
+      />
     </>
   );
 };
