@@ -17,7 +17,7 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-describe("SideBarItemContainer 로직 테스트", () => {
+describe("SideBarItemContainer 로직 단위 테스트를 수행한다.", () => {
   test("SideBarItemContainer를 렌더링 한다.", async () => {
     // given
     const queryClient = new QueryClient();

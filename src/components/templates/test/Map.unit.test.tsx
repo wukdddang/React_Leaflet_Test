@@ -1,5 +1,5 @@
 import { describe, test } from "vitest";
 
-describe("Map 컴포넌트 UI 테스트", () => {
+describe("Map UI 단위 테스트를 수행한다.", () => {
   test("");
 });

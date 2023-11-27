@@ -1,5 +1,5 @@
 import { describe, test } from "vitest";
 
-describe("SideBar 컴포넌트 UI 단위 테스트", () => {
+describe("SideBar UI 단위 테스트를 수행한다.", () => {
   test("");
 });

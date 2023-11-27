@@ -4,7 +4,7 @@ import NavBar from "../NavBar";
 import userEvent from "@testing-library/user-event";
 import Login from "../Login";
 
-describe("NavBar 컴포넌트 UI 단위 테스트", () => {
+describe("NavBar UI 단위 테스트를 수행한다.", () => {
   test("검색창에 값을 입력했을 때 값이 잘 입력되는 지 테스트한다.", async () => {
     const navigate = vi.fn();
     render(<NavBar navigate={navigate} />);

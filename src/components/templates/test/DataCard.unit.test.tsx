@@ -1,5 +1,5 @@
 import { describe, test } from "vitest";
 
-describe("DataCard 컴포넌트를 테스트한다.", () => {
+describe("DataCard UI 단위 테스트를 수행한다.", () => {
   test("");
 });

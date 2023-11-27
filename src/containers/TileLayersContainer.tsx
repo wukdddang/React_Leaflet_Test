@@ -1,13 +1,13 @@
 import TileLayers from "@/components/templates/TileLayers";
 import { KIND_OF_MAP_TILES } from "@/constants/MapTiles";
-import useSideBarStore from "@/store/SideBarStore";
+import useTileLayerStore from "@/store/TileLayerStore";
 
 type TileLayersProps = {
   layers: KIND_OF_MAP_TILES[];
 };
 
 const TileLayersContainer = ({ layers }: TileLayersProps) => {
-  const setCurrentTileLayer = useSideBarStore(
+  const setCurrentTileLayer = useTileLayerStore(
     (state) => state.setCurrentTileLayer
   );
   const handleMouseEnter = (e: React.MouseEvent) => {
