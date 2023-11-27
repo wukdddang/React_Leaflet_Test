@@ -3,13 +3,15 @@ import useSideBarStore, { SideBarOptionType } from "../store/SideBarStore";
 import getDataByCategoryAndPage from "@/api/getDataByCategory";
 import SideBarItem from "@/components/templates/SideBarItem";
 import { useQuery } from "@tanstack/react-query";
+import { UserTracker } from "@/domain/model/UserTracker";
 
 export type SideBarItemProps = {
   text: Exclude<SideBarOptionType, null>;
   icon: React.ReactElement;
+  track?: UserTracker["track"];
 };
 
-const SideBarItemContainer = ({ text, icon }: SideBarItemProps) => {
+const SideBarItemContainer = ({ text, icon, track }: SideBarItemProps) => {
   const isSideBarOpened = useSideBarStore((state) => state.isSideBarOpened);
   const setCurrentSideBarOption = useSideBarStore(
     (state) => state.setCurrentSideBarOption
@@ -37,6 +39,7 @@ const SideBarItemContainer = ({ text, icon }: SideBarItemProps) => {
     setCurrentSideBarOption(text);
     pushCurrentSideBarOption(text, clickedSideBarOptions);
     setIsItemClicked((prev) => !prev);
+    track && track("homePage:sideBarItemContainer:click");
   };
 
   const { data: sideBarItemData, isLoading } = useQuery({

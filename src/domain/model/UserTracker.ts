@@ -1,4 +1,4 @@
-import { LoginEvent } from "./LoginEvent";
+import { LoginEvent } from "@/domain/model/LoginEvent";
 import { UserEvent } from "@/domain/model/UserEvent";
 
 export type UserTracker = {

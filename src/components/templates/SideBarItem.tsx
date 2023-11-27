@@ -74,12 +74,20 @@ const SideBarItem = ({
           transition: "height 0.5s ease", // Add transition to height
         }}
       >
-        {sideBarItemData &&
+        {!isLoading ? (
+          sideBarItemData &&
           sideBarItemData.map((item) => {
             return (
-              <DataCard isItemClicked={isItemClicked} sideBarItemProps={item} />
+              <DataCard
+                isItemClicked={isItemClicked}
+                sideBarItemProps={item}
+                key={item._id}
+              />
             );
-          })}
+          })
+        ) : (
+          <div>로딩중...</div>
+        )}
       </div>
     </>
   );

@@ -1,4 +1,6 @@
 export const Categories = [
+  "bookmark",
+  "range",
   "sar",
   "insar",
   "ship",

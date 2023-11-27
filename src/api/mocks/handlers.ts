@@ -13,12 +13,16 @@ export const handlers = [
     const category = url.searchParams.get("category");
 
     switch (category) {
-      case "ship":
-        return HttpResponse.json(ShipData);
+      case "bookmark":
+        return HttpResponse.json("bookmark");
+      case "range":
+        return HttpResponse.json("range");
       case "sar":
         return HttpResponse.json(SARData);
       case "insar":
         return HttpResponse.json(InSARData);
+      case "ship":
+        return HttpResponse.json(ShipData);
       case "bridge":
         return HttpResponse.json(BridgeData);
       case "water":
