@@ -1,7 +1,7 @@
 import { CategoryData } from "@/api/getDataByCategory";
 import { create } from "zustand";
 
-type DataCardStoreType = {
+export type DataCardStoreType = {
   title: string;
   content: CategoryData;
 };
@@ -15,10 +15,17 @@ type DataCardState = {
 
 const useDataCardStore = create<DataCardState>((set) => ({
   dataCards: [],
-  setCurrentDataCard: (dataCard) =>
-    set({
-      currentDataCard: dataCard,
-    }),
+  setCurrentDataCard: (dataCard) => {
+    set((state) => {
+      if (state.currentDataCard?.title === dataCard.title) {
+        return { currentDataCard: undefined };
+      } else {
+        return {
+          currentDataCard: dataCard,
+        };
+      }
+    });
+  },
   pushDataCards: (dataCard) => {
     set((state) => {
       const updatedDataCards = [...state.dataCards];

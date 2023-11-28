@@ -9,10 +9,17 @@ type DataCardContainerType = {
 
 const DataCardContainer = ({ sideBarItemProps }: DataCardContainerType) => {
   const pushDataCards = useDataCardStore((state) => state.pushDataCards);
+  const setCurrentDataCard = useDataCardStore(
+    (state) => state.setCurrentDataCard
+  );
 
   const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
     pushDataCards({
+      title: sideBarItemProps.title,
+      content: sideBarItemProps,
+    });
+    setCurrentDataCard({
       title: sideBarItemProps.title,
       content: sideBarItemProps,
     });
