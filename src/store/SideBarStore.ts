@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import { KIND_OF_MAP_TILES } from "../constants/MapTiles";
 
 export type SideBarOptionType =
   | null

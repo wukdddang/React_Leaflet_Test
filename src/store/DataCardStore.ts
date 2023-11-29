@@ -1,16 +1,22 @@
+// TODO: 파일명 변경이 필요할 것 같다.?
 import { CategoryData } from "@/api/getDataByCategory";
 import { create } from "zustand";
+import * as L from "leaflet";
 
 export type DataCardStoreType = {
   title: string;
   content: CategoryData;
 };
 
+type ImageOverlayType = {
+  imageOverlay: L.ImageOverlay;
+};
+
 type DataCardState = {
   currentDataCard?: DataCardStoreType;
   dataCards: DataCardStoreType[];
   setCurrentDataCard: (dataCard: DataCardStoreType) => void;
-  pushDataCards: (dataCard: DataCardStoreType) => void;
+  toggleDataCards: (dataCard: DataCardStoreType) => void;
 };
 
 const useDataCardStore = create<DataCardState>((set) => ({
@@ -26,7 +32,7 @@ const useDataCardStore = create<DataCardState>((set) => ({
       }
     });
   },
-  pushDataCards: (dataCard) => {
+  toggleDataCards: (dataCard) => {
     set((state) => {
       const updatedDataCards = [...state.dataCards];
       const dataIdx = updatedDataCards

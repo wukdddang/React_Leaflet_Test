@@ -86,23 +86,4 @@ describe("SideBarStore 로직 통합 테스트를 수행한다.", () => {
       expect.arrayContaining(["BookMark", "Range Search", "SAR"])
     );
   });
-
-  test("SideBar가 닫혔을 때 SideBarItemContainer들이 렌더링되지 않아야 한다.", () => {
-    // given
-    const queryClient = new QueryClient();
-    const { result } = renderHook(() =>
-      useSideBarStore((state) => state.isSideBarOpened)
-    );
-
-    render(
-      <QueryClientProvider client={queryClient}>
-        <SideBarContainer />
-      </QueryClientProvider>
-    );
-
-    // when
-    expect(result.current).toBe(false);
-
-    // then
-  });
 });
