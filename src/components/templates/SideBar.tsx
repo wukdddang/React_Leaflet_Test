@@ -84,27 +84,27 @@ const SideBar = ({
         />
         <SideBarItemContainer
           text="InSAR"
-          icon={<BiSolidAnalyse size={20} />}
+          icon={<BiSolidAnalyse size={20} role="InSAR" />}
         />
         <SideBarItemContainer
           text="Ship Detection"
-          icon={<FaShip size={20} />}
+          icon={<FaShip size={20} role="ShipDetection" />}
         />
         <SideBarItemContainer
           text="Bridge Detection"
-          icon={<BiObjectsHorizontalCenter size={20} />}
+          icon={<BiObjectsHorizontalCenter size={20} role="BridgeDetection" />}
         />
         <SideBarItemContainer
           text="Water Detection"
-          icon={<BiWater size={20} />}
+          icon={<BiWater size={20} role="WaterDetection" />}
         />
         <SideBarItemContainer
           text="Earthquake Detection"
-          icon={<WiEarthquake size={20} />}
+          icon={<WiEarthquake size={20} role="EarthquakeDetection" />}
         />
         <SideBarItemContainer
           text="Oilspill Detection"
-          icon={<IoColorFillOutline size={20} />}
+          icon={<IoColorFillOutline size={20} role="Oilspill Detection" />}
         />
       </div>
     </nav>
