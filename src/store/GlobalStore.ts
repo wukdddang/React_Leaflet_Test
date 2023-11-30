@@ -1,6 +1,7 @@
 import { CategoryData } from "@/api/getDataByCategory";
 import { create } from "zustand";
 import * as L from "leaflet";
+import { isCurrentMapExist } from "@/types/TypePredicates";
 
 interface DrawROIState {
   isROIEnabled: boolean;
@@ -21,7 +22,7 @@ interface GlobalState extends DrawROIState {
   setCurrentMap: (currentMap: L.Map | null) => void;
   currentDataCard?: DataCardStoreType & ImageOverlayType;
   dataCards: (DataCardStoreType & ImageOverlayType)[];
-  setCurrentDataCard: (dataCard: DataCardStoreType) => void;
+  setCurrentDataCard: (dataCard: DataCardStoreType & ImageOverlayType) => void;
   toggleDataCards: (dataCard: DataCardStoreType & ImageOverlayType) => void;
 }
 
@@ -40,13 +41,11 @@ const useGlobalStore = create<GlobalState>((set) => ({
     }),
   dataCards: [],
   setCurrentDataCard: (dataCard) => {
-    set((state) => {
-      if (state.currentDataCard?.title === dataCard.title) {
-        return { currentDataCard: undefined };
-      } else {
-        return { currentDataCard: dataCard };
-      }
-    });
+    set((state) =>
+      state.currentDataCard?.title === dataCard.title
+        ? { currentDataCard: undefined }
+        : { currentDataCard: dataCard }
+    );
   },
   toggleDataCards: (dataCard) => {
     set((state) => {
@@ -55,8 +54,9 @@ const useGlobalStore = create<GlobalState>((set) => ({
         .map((card) => card.title)
         .indexOf(dataCard.title);
 
-      if (dataIdx !== -1) {
-        state.currentMap?.removeLayer(updatedDataCards[dataIdx].imageOverlay);
+      const toggledImageOverlay = updatedDataCards[dataIdx]?.imageOverlay;
+      if (dataIdx !== -1 && toggledImageOverlay) {
+        state.currentMap?.removeLayer(toggledImageOverlay);
 
         updatedDataCards.splice(dataIdx, 1);
       } else {
@@ -65,13 +65,17 @@ const useGlobalStore = create<GlobalState>((set) => ({
           [boundingBox.miny, boundingBox.minx],
           [boundingBox.maxy, boundingBox.maxx],
         ];
-        const imageOverlay = L.imageOverlay(
+        const toggledImageOverlay = L.imageOverlay(
           dataCard.content.imageUrl,
           imageBounds
         );
 
-        dataCard.imageOverlay = imageOverlay;
-        imageOverlay.addTo(state.currentMap);
+        // dataCard 프로퍼티에 leaflet 객체 주입
+        dataCard.imageOverlay = toggledImageOverlay;
+
+        if (isCurrentMapExist(state.currentMap)) {
+          toggledImageOverlay.addTo(state.currentMap);
+        }
         updatedDataCards.push(dataCard);
       }
 
