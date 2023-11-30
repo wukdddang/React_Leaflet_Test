@@ -30,7 +30,7 @@ describe("NavBar UI 단위 테스트를 수행한다.", () => {
 
     const user = userEvent.setup();
 
-    const loginButton = await screen.getByRole("login");
+    const loginButton = screen.getByRole("login");
     await user.click(loginButton);
 
     const loginSubmitButton = await screen.getByText("로그인");

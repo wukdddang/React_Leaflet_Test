@@ -9,7 +9,12 @@ import SideBarContainer from "@/containers/SideBarContainer";
 beforeAll(() => server.listen());
 afterEach(() => {
   server.resetHandlers();
-  renderHook(() => useSideBarStore.setState({ isSideBarOpened: false }));
+  renderHook(() =>
+    useSideBarStore.setState({
+      clickedSideBarOptions: [],
+      isSideBarOpened: false,
+    })
+  );
 });
 afterAll(() => server.close());
 

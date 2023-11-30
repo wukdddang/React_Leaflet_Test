@@ -5,13 +5,7 @@ import useDrawROIStore from "@/store/DrawROIStore";
 import Map from "@/components/templates/Map";
 import useTileLayerStore from "@/store/TileLayerStore";
 import useGlobalStore from "@/store/GlobalStore";
-
-type BoundingBox = { maxx: number; maxy: number; minx: number; miny: number };
-
-type OverlayPNGToMap = {
-  imageUrl: string;
-  boundingBox: BoundingBox;
-};
+import { isCurrentMapExist } from "@/types/TypePredicates";
 
 const MapContainer = () => {
   const mapRef = useRef<L.Map | null>(null);
@@ -27,21 +21,6 @@ const MapContainer = () => {
     center: [36, 127.5],
     zoom: 8,
     zoomControl: false,
-  };
-
-  // PNG 파일을 leaflet 맵에 overlay 한다.
-  const toggleOverLayPNGToMap = ({
-    imageUrl,
-    boundingBox,
-  }: OverlayPNGToMap) => {
-    const imageBounds: L.LatLngBoundsLiteral = [
-      [boundingBox.miny, boundingBox.minx],
-      [boundingBox.maxy, boundingBox.maxx],
-    ];
-
-    const imageOverlay = L.imageOverlay(imageUrl, imageBounds);
-
-    mapRef.current && imageOverlay.addTo(mapRef.current);
   };
 
   // PNG 파일의 zoom 레벨을 결정한다.
@@ -72,8 +51,7 @@ const MapContainer = () => {
       tileLayerRef.current.remove();
     }
 
-    // TODO: TypePredicates.ts로 predicate 코드 분리 필요
-    if (mapRef.current) {
+    if (isCurrentMapExist(mapRef.current)) {
       tileLayerRef.current = L.tileLayer(
         MAP_TILES[currentTileLayer].url,
         MAP_TILES[currentTileLayer].options
