@@ -7,4 +7,8 @@ export const isCurrentMapExist = (
   return currentMap !== null;
 };
 
-export const isTileLayerExist = () => {};
+export const isTileLayerExist = (
+  currentTileLayer: L.TileLayer | null
+): currentTileLayer is L.TileLayer => {
+  return currentTileLayer !== null;
+};

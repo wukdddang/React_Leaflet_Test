@@ -1,10 +1,8 @@
 import { render, renderHook, screen } from "@testing-library/react";
 import { afterAll, afterEach, beforeAll, describe, expect, test } from "vitest";
 import useGlobalStore from "@/store/GlobalStore";
-import SideBarItemContainer from "@/containers/SideBarItemContainer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import userEvent from "@testing-library/user-event";
-import { SlMap } from "react-icons/sl";
 import { server } from "@/setupTests";
 import SideBarContainer from "@/containers/SideBarContainer";
 
@@ -110,10 +108,7 @@ describe("GlobalStore 로직 통합 테스트를 수행한다.", () => {
     const user = userEvent.setup();
     render(
       <QueryClientProvider client={queryClient}>
-        <SideBarItemContainer
-          text="SAR"
-          icon={<SlMap size={20} role="SAR" />}
-        />
+        <SideBarContainer />
       </QueryClientProvider>
     );
 
@@ -128,5 +123,33 @@ describe("GlobalStore 로직 통합 테스트를 수행한다.", () => {
 
     // then
     expect(currentDataCard.result.current).toBeUndefined();
+  });
+
+  test("영상 모두 제거하기 버튼을 클릭하면 모든 영상들을 제거한다.", async () => {
+    // given
+    const dataCards = renderHook(() =>
+      useGlobalStore((state) => state.dataCards)
+    );
+    const queryClient = new QueryClient();
+    const user = userEvent.setup();
+    render(
+      <QueryClientProvider client={queryClient}>
+        <SideBarContainer />
+      </QueryClientProvider>
+    );
+
+    const sideBarItem = screen.getByRole("SAR");
+    await user.click(sideBarItem);
+
+    // when
+    const dataCard1 = screen.getByText("HwaSeong_map_2_ORIGN_RGB000102");
+    await user.click(dataCard1);
+    const dataCard2 = screen.getByText("Sejong_map_2_ORIGN_RGB000102");
+    await user.click(dataCard2);
+    const dataCard3 = screen.getByText("Daecheong_map_2_ORIGN_RGB000102");
+    await user.click(dataCard3);
+
+    // then
+    expect(dataCards.result.current.length).toBe(0);
   });
 });

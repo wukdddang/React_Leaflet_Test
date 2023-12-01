@@ -5,28 +5,22 @@ import useDrawROIStore from "@/store/DrawROIStore";
 import Map from "@/components/templates/Map";
 import useTileLayerStore from "@/store/TileLayerStore";
 import useGlobalStore from "@/store/GlobalStore";
-import { isCurrentMapExist } from "@/types/TypePredicates";
+import { isCurrentMapExist, isTileLayerExist } from "@/types/TypePredicates";
+import useSideBarStore from "@/store/SideBarStore";
 
 const MapContainer = () => {
   const mapRef = useRef<L.Map | null>(null);
   const tileLayerRef: MutableRefObject<L.TileLayer | null> = useRef(null);
   const currentTileLayer = useTileLayerStore((state) => state.currentTileLayer);
   const isROIEnabled = useDrawROIStore((state) => state.isROIEnabled);
+  const isSideBarOpened = useSideBarStore((state) => state.isSideBarOpened);
   const setROIEnable = useDrawROIStore((state) => state.setROIEnable);
-  const currentDataCard = useGlobalStore((state) => state.currentDataCard);
-  const dataCards = useGlobalStore((state) => state.dataCards);
   const setCurrentMap = useGlobalStore((state) => state.setCurrentMap);
 
   const mapParams: L.MapOptions = {
     center: [36, 127.5],
     zoom: 8,
     zoomControl: false,
-  };
-
-  // PNG 파일의 zoom 레벨을 결정한다.
-  const calculatePNGZoomLevel = (width: number) => {
-    const scaleFactor = 500;
-    return Math.log2(scaleFactor / width);
   };
 
   useEffect(() => {
@@ -46,8 +40,7 @@ const MapContainer = () => {
   }, [mapRef]);
 
   useEffect(() => {
-    // TODO: TypePredicates.ts로 predicate 코드 분리 필요
-    if (tileLayerRef.current) {
+    if (isTileLayerExist(tileLayerRef.current)) {
       tileLayerRef.current.remove();
     }
 
@@ -59,7 +52,6 @@ const MapContainer = () => {
     }
   }, [currentTileLayer]);
 
-  // TODO: 렌더링을 위한 ImageOverlay의 객체 데이터도 전역에서 다루도록 한다.
   useEffect(() => {
     setCurrentMap(mapRef.current);
   }, []);
@@ -67,6 +59,7 @@ const MapContainer = () => {
   return (
     <Map
       currentMap={mapRef.current}
+      isSideBarOpened={isSideBarOpened}
       isROIEnabled={isROIEnabled}
       setROIEnable={setROIEnable}
     />

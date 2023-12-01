@@ -10,11 +10,17 @@ const mapStyles: CSSProperties = {
 
 type Props = {
   currentMap: L.Map | null;
+  isSideBarOpened: boolean;
   isROIEnabled: boolean;
   setROIEnable: (currentROI: boolean) => void;
 };
 
-const Map = ({ currentMap, isROIEnabled, setROIEnable }: Props) => {
+const Map = ({
+  currentMap,
+  isSideBarOpened,
+  isROIEnabled,
+  setROIEnable,
+}: Props) => {
   return (
     <>
       <div
@@ -22,6 +28,8 @@ const Map = ({ currentMap, isROIEnabled, setROIEnable }: Props) => {
         style={{
           ...mapStyles,
           position: "relative",
+          transition: "0.3s ease",
+          left: isSideBarOpened ? "200px" : 0,
           top: 0,
           zIndex: 0,
         }}

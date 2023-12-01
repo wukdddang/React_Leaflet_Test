@@ -70,6 +70,7 @@ const SideBar = ({
           width: "100%",
         }}
       >
+        {/* SideBar의 각 Item들을 렌더링하는 SideBarItemContainer 컴포넌트 */}
         <SideBarItemContainer
           text="BookMark"
           icon={<BsBookmarks size={20} role="BookMark" />}

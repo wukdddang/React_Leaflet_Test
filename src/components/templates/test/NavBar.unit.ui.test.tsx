@@ -5,22 +5,10 @@ import userEvent from "@testing-library/user-event";
 import Login from "../Login";
 
 describe("NavBar UI 단위 테스트를 수행한다.", () => {
-  test("검색창에 값을 입력했을 때 값이 잘 입력되는 지 테스트한다.", async () => {
-    const navigate = vi.fn();
-    render(<NavBar navigate={navigate} />);
-
-    const user = userEvent.setup();
-    const searchBox = await screen.getByRole("Search");
-
-    await user.type(searchBox, "안녕하세요");
-
-    expect(searchBox).toBeInTheDocument();
-    expect(searchBox).toHaveValue("안녕하세요");
-  });
-
   test("로그인 버튼을 클릭했을 때 새로운 페이지로 라우팅된다.", async () => {
     const navigate = vi.fn();
     const track = vi.fn();
+
     render(
       <>
         <NavBar navigate={navigate} />

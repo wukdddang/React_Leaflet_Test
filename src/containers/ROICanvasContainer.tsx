@@ -39,8 +39,8 @@ const ROICanvasContainer = ({ currentMap }: ROICanvasType) => {
       const context = canvas.getContext("2d");
       if (context) {
         context.lineCap = "round";
-        context.strokeStyle = "#652484";
-        context.lineWidth = 2;
+        context.strokeStyle = "dodgerblue";
+        context.lineWidth = 1;
         contextRef.current = context;
       }
 
