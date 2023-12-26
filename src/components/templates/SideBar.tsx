@@ -9,13 +9,54 @@ import { WiEarthquake } from "react-icons/wi";
 import { SlMap } from "react-icons/sl";
 import { FaShip } from "react-icons/fa6";
 import { IoColorFillOutline } from "react-icons/io5";
-import SideBarItemContainer from "@/containers/SideBarItemContainer";
+import SideBarItemContainer, {
+  SideBarItemProps,
+} from "@/containers/SideBarItemContainer";
 
 type Props = {
   isSideBarOpened: boolean;
   toggleSideBarOpened: () => void;
   handleToggleSideBar: (e: React.MouseEvent) => void;
 };
+
+const sideBarItems = [
+  {
+    text: "BookMark",
+    icon: <BsBookmarks size={20} role="BookMark" />,
+  },
+  {
+    text: "Range Search",
+    icon: <BsBoundingBoxCircles size={20} role="RangeSearch" />,
+  },
+  {
+    text: "SAR",
+    icon: <SlMap size={20} role="SAR" />,
+  },
+  {
+    text: "InSAR",
+    icon: <BiSolidAnalyse size={20} role="InSAR" />,
+  },
+  {
+    text: "Ship Detection",
+    icon: <FaShip size={20} role="ShipDetection" />,
+  },
+  {
+    text: "Bridge Detection",
+    icon: <BiObjectsHorizontalCenter size={20} role="BridgeDetection" />,
+  },
+  {
+    text: "Water Detection",
+    icon: <BiWater size={20} role="WaterDetection" />,
+  },
+  {
+    text: "Earthquake Detection",
+    icon: <WiEarthquake size={20} role="EarthquakeDetection" />,
+  },
+  {
+    text: "Oilspill Detection",
+    icon: <IoColorFillOutline size={20} role="Oilspill Detection" />,
+  },
+];
 
 const SideBar = ({
   isSideBarOpened,
@@ -71,42 +112,13 @@ const SideBar = ({
         }}
       >
         {/* SideBar의 각 Item들을 렌더링하는 SideBarItemContainer 컴포넌트 */}
-        <SideBarItemContainer
-          text="BookMark"
-          icon={<BsBookmarks size={20} role="BookMark" />}
-        />
-        <SideBarItemContainer
-          text="Range Search"
-          icon={<BsBoundingBoxCircles size={20} role="RangeSearch" />}
-        />
-        <SideBarItemContainer
-          text="SAR"
-          icon={<SlMap size={20} role="SAR" />}
-        />
-        <SideBarItemContainer
-          text="InSAR"
-          icon={<BiSolidAnalyse size={20} role="InSAR" />}
-        />
-        <SideBarItemContainer
-          text="Ship Detection"
-          icon={<FaShip size={20} role="ShipDetection" />}
-        />
-        <SideBarItemContainer
-          text="Bridge Detection"
-          icon={<BiObjectsHorizontalCenter size={20} role="BridgeDetection" />}
-        />
-        <SideBarItemContainer
-          text="Water Detection"
-          icon={<BiWater size={20} role="WaterDetection" />}
-        />
-        <SideBarItemContainer
-          text="Earthquake Detection"
-          icon={<WiEarthquake size={20} role="EarthquakeDetection" />}
-        />
-        <SideBarItemContainer
-          text="Oilspill Detection"
-          icon={<IoColorFillOutline size={20} role="Oilspill Detection" />}
-        />
+        {sideBarItems.map((item) => (
+          <SideBarItemContainer
+            key={item.text}
+            text={item.text as SideBarItemProps["text"]}
+            icon={item.icon}
+          />
+        ))}
       </div>
     </nav>
   );
